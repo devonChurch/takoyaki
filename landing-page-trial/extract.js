@@ -1,41 +1,31 @@
 'use strict';
 
 const fs = require('fs');
-const posts = require('./posts');
-const snippets = {};
-let reads = 1;
+const inject = require('./inject');
+const snippets = [];
 
-{
+function init(posts) {
 
-    for (const post of posts) {
-
-        queryPost(post);
-
-    }
+    for (const post of posts) queryPost(post);
+    inject(snippets);
 
 }
 
 function queryPost(post) {
 
-    fs.readFile(`posts/${post}.html`, 'utf8', (err, data) => {
-
-        if (err) throw err;
-
-        snippets[post] = distillData(data);
-        reads += 1;
-        if (reads === post.length) console.log(snippets);
-
-    });
+    const data = fs.readFileSync(`posts/${post}.html`, 'utf8');
+    snippets.push(distillData(post, data));
 
 }
 
-function distillData(data) {
+function distillData(post, data) {
 
+    const href = `/posts/${post}.html`;
     const heading = extractElement(data, '<h1>', '</h1>', 'content');
     const hash = extractElement(data, '<h3 class="post-hashtag">', '</h3>', 'content');
     const time = extractElement(data, '<time class="post-creation"', '</time>', 'element');
 
-    return { heading, hash, time };
+    return { href, heading, hash, time };
 
 }
 
@@ -48,3 +38,5 @@ function extractElement(data, open, close, extraction) {
     return data.substr(0, end);
 
 }
+
+module.exports = init;
