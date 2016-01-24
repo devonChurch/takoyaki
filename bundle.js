@@ -47,11 +47,9 @@
 	/* <posts> */'use strict';
 	
 	__webpack_require__(1);__webpack_require__(2);__webpack_require__(3); /* </posts> */
-	__webpack_require__(4);
 	
-	// Build tools
-	var build = '../../build/';
-	!(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+	__webpack_require__(4);
+	__webpack_require__(5);
 
 /***/ },
 /* 1 */
@@ -73,25 +71,15 @@
 
 /***/ },
 /* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "index.html";
+
+/***/ },
+/* 5 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
-/***/ function(module, exports) {
-
-	function webpackContext(req) {
-		throw new Error("Cannot find module '" + req + "'.");
-	}
-	webpackContext.keys = function() { return []; };
-	webpackContext.resolve = webpackContext;
-	module.exports = webpackContext;
-	webpackContext.id = 8;
-
 
 /***/ }
 /******/ ]);
