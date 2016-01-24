@@ -49,29 +49,9 @@
 	__webpack_require__(1);__webpack_require__(2);__webpack_require__(3); /* </posts> */
 	__webpack_require__(4);
 	
-	// var html = require('jade!../posts/one.jade');
-
-	// var html = require('file?name=three.html!jade-html!../posts/three.jade');
-	// console.log(html);
-
-	// const jade = [];
-	// const posts = [
-	//     'one',
-	//     'two',
-	//     'three'
-	// ];
-
-	// for (const post of posts) {
-	//
-	//     console.log(`--> POST = ${post}`);
-	//
-	//     // jade.push(require(`file?name=${post}.html!jade-html!../posts/${post}.jade`));
-	//     require(`file?name=${post}.html!jade-html!../posts/${post}.jade`);
-	//     // require(`file?name=two.html!jade-html!../posts/two.jade`);
-	// }
-	//
-	//
-	// // './src/app.js', 'file?name=index.html!jade-html!./src/index.jade'
+	// Build tools
+	var build = '../../build/';
+	!(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 /***/ },
 /* 1 */
@@ -96,6 +76,22 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
+/***/ function(module, exports) {
+
+	function webpackContext(req) {
+		throw new Error("Cannot find module '" + req + "'.");
+	}
+	webpackContext.keys = function() { return []; };
+	webpackContext.resolve = webpackContext;
+	module.exports = webpackContext;
+	webpackContext.id = 8;
+
 
 /***/ }
 /******/ ]);
