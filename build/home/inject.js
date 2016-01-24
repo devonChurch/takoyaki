@@ -15,7 +15,7 @@ function init(snippets) {
 
 function buildSnippet(s) {
 
-    return `
+    const html = `
         <article>
             <a href="${s.href}">
                 <h2>${s.heading}</h2>
@@ -24,6 +24,9 @@ function buildSnippet(s) {
             ${s.time}
         </article>
     `;
+
+    // Jade build fails with HTML indentation (4 spaces = tab).
+    return html.replace(/    /g, '');
 
 }
 

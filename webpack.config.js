@@ -21,6 +21,8 @@ module.exports = {
         loaders: [
             { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap!autoprefixer?browsers=last 2 versions!sass') },
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel!eslint'} // Automatically generates source maps without the sourceMaps config
+            // { test: /\index.jade$/, loader: 'file?name=index.html!jade-html'}
+            // { test: /\.jade$/, loader: ['index', 'file?name=index.html!jade-html']}
             // { test: /\.jade$/, loader: ExtractTextPlugin.extract('jade') },
             // { test: /\.jade$/, loader: 'jade-html'},
         ]

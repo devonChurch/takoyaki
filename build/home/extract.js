@@ -20,7 +20,7 @@ function queryPost(post) {
 
 function distillData(post, data) {
 
-    const href = `posts/${post}.html`;
+    const href = `${post}.html`;
     const heading = extractElement(data, '<h1>', '</h1>', 'content');
     const hash = extractElement(data, '<h3 class="post-hashtag">', '</h3>', 'content');
     const time = extractElement(data, '<time class="post-creation"', '</time>', 'element');
