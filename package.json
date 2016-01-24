@@ -4,7 +4,9 @@
   "description": "A simple personal portal for the domain devonchu.ch",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "curate": "cd ./build/home/ && node curate.js",
+    "require": "cd ./build/posts/ && node require.js"
   },
   "repository": {
     "type": "git",
