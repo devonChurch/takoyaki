@@ -1,26 +1,26 @@
 {
-  "name": "blueberry-danish",
+  "name": "takoyaki",
   "version": "1.0.0",
-  "description": "Location pin icon animation based on a particle system",
+  "description": "A simple personal portal for the domain devonchu.ch",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devonChurch/blueberry-danish.git"
+    "url": "git+https://github.com/devonChurch/takoyaki.git"
   },
   "keywords": [
-    "Canvas",
-    "Particles",
-    "Animation"
+    "Static site generator",
+    "Portal",
+    "ES6"
   ],
   "author": "Devon Church",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/devonChurch/blueberry-danish/issues"
+    "url": "https://github.com/devonChurch/takoyaki/issues"
   },
-  "homepage": "https://github.com/devonChurch/blueberry-danish#readme",
+  "homepage": "https://github.com/devonChurch/takoyaki#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^5.8.33",
@@ -32,6 +32,10 @@
     "eslint-loader": "^1.1.1",
     "eslint-plugin-babel": "^2.1.1",
     "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.5",
+    "jade": "^1.11.0",
+    "jade-html-loader": "0.0.3",
+    "jade-loader": "^0.8.0",
     "node-sass": "^3.4.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
@@ -39,6 +43,6 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^2.2.0"
   }
 }

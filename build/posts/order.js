@@ -2,5 +2,6 @@
 
 module.exports = [
     'one',
-    'two'
+    'two',
+    'three'
 ];
