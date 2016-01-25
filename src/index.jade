@@ -26,31 +26,26 @@ ul
 
 h2 Posts:
 
-<!-- <posts> --><section class="posts">
-<article>
-<a href="one.html">
-<h2>Post One</h2>
-</a>
-<h3>#Article</h3>
-<time class="post-creation" datetime="2001-05-15T19:00">January 1</time>
-</article>
+section.posts
+    //- [ Posts
+    article
+        a(href='one.html')
+            h2 Post One
+        h3 #Article
+        time.post-creation(datetime='2001-05-15T19:00') January 1
 
-<article>
-<a href="two.html">
-<h2>Post Two</h2>
-</a>
-<h3>#Article</h3>
-<time class="post-creation" datetime="2001-05-15T19:00">February 2</time>
-</article>
+    article
+        a(href='two.html')
+            h2 Post Two
+        h3 #Article
+        time.post-creation(datetime='2001-05-15T19:00') January 1
 
-<article>
-<a href="three.html">
-<h2>Post Three</h2>
-</a>
-<h3>#Article</h3>
-<time class="post-creation" datetime="2001-05-15T19:00">March 1</time>
-</article>
-</section><!-- </posts> -->
+    article
+        a(href='three.html')
+            h2 Post Three
+        h3 #Article
+        time.post-creation(datetime='2001-05-15T19:00') January 1
+//- Posts ]
 
 hr
 

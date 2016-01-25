@@ -13,7 +13,7 @@ function init(posts) {
 
 function queryPost(post) {
 
-    const data = fs.readFileSync(`../../dist/${post}.html`, 'utf8');
+    const data = fs.readFileSync(`../../src/posts/${post}.jade`, 'utf8');
     snippets.push(distillData(post, data));
 
 }
@@ -21,21 +21,23 @@ function queryPost(post) {
 function distillData(post, data) {
 
     const href = `${post}.html`;
-    const heading = extractElement(data, '<h1>', '</h1>', 'content');
-    const hash = extractElement(data, '<h3 class="post-hashtag">', '</h3>', 'content');
-    const time = extractElement(data, '<time class="post-creation"', '</time>', 'element');
+    const heading = extractData(data, 'Heading');
+    const hash = extractData(data, 'Hash Tag');
+    const time = extractData(data, 'Date');
 
     return { href, heading, hash, time };
 
 }
 
-function extractElement(data, open, close, extraction) {
+function extractData(data, ref) {
 
-    const start = extraction === 'content' ? data.indexOf(open) + open.length : data.indexOf(open);
+    const open = `//- [ ${ref}`;
+    const close = `//- ${ref} ]`;
+    const start = data.indexOf(open) + open.length;
     data = data.substr(start);
-    const end = extraction === 'content' ? data.indexOf(close) : data.indexOf(close) + close.length;
+    const end = data.indexOf(close);
 
-    return data.substr(0, end);
+    return data.substr(0, end).trim();
 
 }
 

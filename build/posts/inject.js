@@ -15,13 +15,14 @@ function init(posts) {
 
 function buildStatements(post) {
 
-    return `require('file?name=${post}.html!jade-html!../posts/${post}.jade');`;
+    return `
+require('file?name=${post}.html!jade-html!../posts/${post}.jade');`;
 
 }
 
 function updateEntryJs(js, data) {
 
-    return override(js, '/* <posts> */', '/* </posts> */', data);
+    return override(js, '/* [ Posts */', '/* Posts ] */', data);
 
 }
 

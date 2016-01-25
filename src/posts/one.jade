@@ -1,14 +1,26 @@
-<h1>Post One</h1>
+include ../partials/top.jade
 
-p.
+h1 
+    //- [ Heading
+    Post One
+    //- Heading ]
+
+p
     Lorem ipsum dolor sit amet.
 
-<h3 class="post-hashtag">#Article</h3>
+h3.post-hashtag
+    //- [ Hash Tag
+    #Article
+    //- Hash Tag ]
 
-p.
+p
     Lorem ipsum dolor sit amet.
 
-<time class="post-creation" datetime="2001-05-15T19:00">January 1</time>
+//- [ Date
+time.post-creation(datetime='2001-05-15T19:00') January 1
+//- Date ]
 
-p.
+p
     Lorem ipsum dolor sit amet.
+    
+include ../partials/bottom.jade
