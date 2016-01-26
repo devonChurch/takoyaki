@@ -1,24 +1,21 @@
+-
+    const post = {
+        heading: 'Post one',
+        type: 'Article',
+        date: generateDate({
+            year: 2016,
+            month: 12,
+            day: 14
+        })
+    };
+
 include ../partials/top.jade
 
-h1 
-    //- [ Heading
-    Post One
-    //- Heading ]
-
 p
     Lorem ipsum dolor sit amet.
 
-h3.post-hashtag
-    //- [ Hash Tag
-    #Article
-    //- Hash Tag ]
-
 p
     Lorem ipsum dolor sit amet.
-
-//- [ Date
-time.post-creation(datetime='2001-05-15T19:00') January 1
-//- Date ]
 
 p
     Lorem ipsum dolor sit amet.

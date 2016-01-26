@@ -1,0 +1,10 @@
+-
+    function generateDate (post) {
+        
+        const monthString = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        const numFormat = `${post.year}-${post.month}-${post.day}`;
+        const stringFormat = `${monthString[post.month - 1]} ${post.day} ${post.year}`
+        
+        return {numFormat, stringFormat};
+        
+    };
