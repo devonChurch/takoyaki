@@ -1,3 +1,6 @@
+include ./snippets.jade
+include partials/top.jade
+
 header
     p.
         Lorem ipsum dolor sit amet.
@@ -26,26 +29,21 @@ ul
 
 h2 Posts:
 
-section.posts
-    //- [ Posts
-    article
-        a(href='one.html')
-            h2 Post One
-        h3 #Article
-        time.post-creation(datetime='2001-05-15T19:00') January 1
+section.snippets
+    
+    for snippet in snippets
+        article.snippet
+            h2.snippet__heading #{snippet.heading}
+            h3.snippet__hashtag #{snippet.type}
+            time.snippet__date(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
+        
+        
 
-    article
-        a(href='two.html')
-            h2 Post Two
-        h3 #Article
-        time.post-creation(datetime='2001-05-15T19:00') January 1
-
-    article
-        a(href='three.html')
-            h2 Post Three
-        h3 #Article
-        time.post-creation(datetime='2001-05-15T19:00') January 1
-//- Posts ]
+//- article
+//-     a(href='one.html')
+//-         h2 Post One
+//-     h3 #Article
+//-     time.post-creation(datetime='2001-05-15T19:00') January 1
 
 hr
 

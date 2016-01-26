@@ -1,43 +1,77 @@
 'use strict';
 
 const fs = require('fs');
-const inject = require('./inject');
-const snippets = [];
+const dir = '../../src/';
 
 function init(posts) {
 
-    for (const post of posts) queryPost(post);
-    inject(snippets);
+
+    let snippets = compileSnippets(posts);
+    snippets = constructSnippets(snippets);
+    console.log(snippets);
+    injectSnippets(snippets);
 
 }
 
-function queryPost(post) {
+function compileSnippets(posts) {
 
-    const data = fs.readFileSync(`../../src/posts/${post}.jade`, 'utf8');
-    snippets.push(distillData(post, data));
+    let snippets = '';
+
+    for (const post of posts) {
+
+        let data = getPost(post);
+        data = distillData(post, data);
+        snippets += data;
+
+    }
+
+    return snippets;
+
+}
+
+function getPost(post) {
+
+    return fs.readFileSync(`${dir}posts/${post}.jade`, 'utf8');
 
 }
 
 function distillData(post, data) {
 
-    const href = `${post}.html`;
-    const heading = extractData(data, 'Heading');
-    const hash = extractData(data, 'Hash Tag');
-    const time = extractData(data, 'Date');
-
-    return { href, heading, hash, time };
+    return `
+    {
+        href: ${post},
+        ${extractData(data)}
+    },
+`;
 
 }
 
-function extractData(data, ref) {
+function extractData(data) {
 
-    const open = `//- [ ${ref}`;
-    const close = `//- ${ref} ]`;
+    const open = 'const post = {';
+    const close = `};`;
     const start = data.indexOf(open) + open.length;
     data = data.substr(start);
     const end = data.indexOf(close);
 
     return data.substr(0, end).trim();
+
+}
+
+function constructSnippets(snippets) {
+
+    return `
+-
+    const snippets = [
+        ${snippets}
+    ];
+`;
+
+}
+
+function injectSnippets(snippets) {
+
+    fs.writeFileSync(`${dir}snippets.jade`, snippets);
 
 }
 
