@@ -1,0 +1,29 @@
+@font-face {
+  font: {
+    family: 'roboto-light';
+    weight: 300;
+    style: normal;
+  }
+  src: url('../fonts/roboto/roboto-300.woff2') format('woff2'),
+       url('../fonts/roboto/roboto-300.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: 'roboto-bold';
+    weight: 900;
+    style: normal;
+  }
+  src: url('../fonts/roboto/roboto-900.woff2') format('woff2'),
+       url('../fonts/roboto/roboto-900.woff') format('woff');
+}
+
+@font-face {
+  font: {
+    family: 'signika-bold';
+    weight: 900;
+    style: normal;
+  }
+  src: url('../fonts/signika/signika-600.woff2') format('woff2'),
+       url('../fonts/signika/signika-600.woff') format('woff');
+}

@@ -17,7 +17,7 @@ function init(posts) {
 function buildStatements(post) {
 
     return `
-require('file?name=${post}.html!jade-html!./posts/${post}.jade');`;
+require('file?name=${post}.html!jade-html!./posts/${post}');`;
 
 }
 
