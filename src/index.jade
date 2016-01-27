@@ -1,4 +1,4 @@
-include ./snippets.jade
+include partials/snippets.jade
 include partials/top.jade
 
 header
@@ -36,14 +36,6 @@ section.snippets
             h2.snippet__heading #{snippet.heading}
             h3.snippet__hashtag #{snippet.type}
             time.snippet__date(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
-        
-        
-
-//- article
-//-     a(href='one.html')
-//-         h2 Post One
-//-     h3 #Article
-//-     time.post-creation(datetime='2001-05-15T19:00') January 1
 
 hr
 

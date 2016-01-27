@@ -2,13 +2,14 @@
 
 const fs = require('fs');
 const override = require('../helper/override');
-const dir = '../../src/js/entry.js';
+const dir = '../../src/entry.js';
 
 function init(posts) {
 
     let js = '';
     for (const post of posts) js += buildStatements(post);
-    js = updateEntryJs(js, fs.readFileSync(dir, 'utf8'));
+    const data = getEntry();
+    js = updateEntryJs(js, data);
     saveEntryJs(js);
 
 }
@@ -16,7 +17,13 @@ function init(posts) {
 function buildStatements(post) {
 
     return `
-require('file?name=${post}.html!jade-html!../posts/${post}.jade');`;
+require('file?name=${post}.html!jade-html!./posts/${post}.jade');`;
+
+}
+
+function getEntry(post) {
+
+    return fs.readFileSync(dir, 'utf8');
 
 }
 

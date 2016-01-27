@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "curate": "cd ./build/home/ && node curate.js",
-    "require": "cd ./build/posts/ && node require.js"
+    "require": "cd ./build/posts/ && node require.js",
+    "order": "cd ./build/posts/ && open order.js"
   },
   "repository": {
     "type": "git",
