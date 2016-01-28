@@ -1,43 +1,44 @@
 include partials/snippets.jade
 include partials/top.jade
 
-header
-    p.
+    header
+        p.
+            Lorem ipsum dolor sit amet.
+
+
+    hr
+
+    h1 Welcome
+
+    p
         Lorem ipsum dolor sit amet.
 
+    p
+        Lorem ipsum dolor sit amet.
 
-hr
+    p
+        Lorem ipsum dolor sit amet.
 
-h1 Welcome
-
-p
-    Lorem ipsum dolor sit amet.
-
-p
-    Lorem ipsum dolor sit amet.
-
-p
-    Lorem ipsum dolor sit amet.
-
-ul
-    li One
-    li Two
-    li Three
-    li Four
-    li Five
+    ul
+        li One
+        li Two
+        li Three
+        li Four
+        li Five
 
 
-h2 Posts:
+    h2 Posts:
 
-section.snippets
-    
-    for snippet in snippets
-        article.snippet
-            h2.snippet__heading #{snippet.heading}
-            h3.snippet__hashtag #{snippet.type}
-            time.snippet__date(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
+    section.snippets
+        
+        for snippet in snippets
+            article.snippet
+                h2.snippet__heading #{snippet.heading}
+                h3.snippet__hashtag #{snippet.type}
+                time.snippet__date(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
 
-hr
+    hr
 
-footer
-    p Lorem ipsum dolor sit amet.
+
+
+    include partials/bottom.jade

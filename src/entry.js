@@ -1,12 +1,7 @@
-require('file?name=index.html!jade-html!./index.jade');
+require('./js/destination');
 require('./sass/style.scss');
 
-// require('./fonts/roboto/roboto-300.woff2');
-// require('./fonts/roboto/roboto-300.woff');
-// require('./fonts/roboto/roboto-900.woff2');
-// require('./fonts/roboto/roboto-900.woff2');
-// require('./fonts/signika/signika-600.woff');
-// require('./fonts/signika/signika-600.woff');
+require('file?name=index.html!jade-html!./index');
 
 /* [ Posts */
 require('file?name=one.html!jade-html!./posts/one');

@@ -1,14 +1,17 @@
 doctype html
 
-html
+html(lang="en")
 
     head
 
-        link(rel='stylesheet')(href="style.css")
+        link(rel='stylesheet', href="style.css")
 
     body
+    
+        div.structure.structure--background
+            div.structure.structure--column
 
-    include ./header.jade
-    include ./generate-date.jade
+                include ./header.jade
+                include ./generate-date.jade
 
 // - Article starts

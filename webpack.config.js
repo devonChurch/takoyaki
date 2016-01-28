@@ -11,7 +11,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from:  './fonts', to: './fonts' },
+            { from:  './fonts', to: './fonts' }
             // { from:  '../img', to: 'img' }
         ]),
         new ExtractTextPlugin('style.css')
@@ -28,6 +28,6 @@ module.exports = {
         failOnError: false
     },
     resolve: {
-        extensions: ['', '.js', '.jade', '.woff', '.woff2']
+        extensions: ['', '.js', 'scss', '.jade', '.woff', '.woff2']
     }
 };

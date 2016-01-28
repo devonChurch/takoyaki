@@ -21,7 +21,7 @@ require('file?name=${post}.html!jade-html!./posts/${post}');`;
 
 }
 
-function getEntry(post) {
+function getEntry() {
 
     return fs.readFileSync(dir, 'utf8');
 
