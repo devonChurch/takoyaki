@@ -1,9 +1,11 @@
 body {
-    animation: {
-        duration: 10s;
-        iteration-count: infinite;
-        name: structural-color;
-    }
+    // animation: {
+    //     duration: 10s;
+    //     iteration-count: infinite;
+    //     name: structural-color;
+    // }
+    background: skyblue;
+    color: skyblue;
 	font-size: 0.875rem;
 
     @include media('>=small') {
@@ -25,11 +27,12 @@ body {
 	&--background {
 		background: white;
 		min-height: calc(100vh - 2rem);
-		padding: 1rem;
+		padding: 6rem 1rem 1rem;
 	}
 
 	&--column {
 		margin: auto;
-		max-width: 62.5rem;
+		max-width: 58rem;
+        position: relative;
 	}
 }

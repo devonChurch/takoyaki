@@ -1,0 +1,11 @@
+-
+    contactItems = [
+        { heading: 'Code Pen', link: '#', target: '_blank'},
+        { heading: 'Git Hub', link: '#', target: '_blank'},
+        { heading: 'Linked In', link: '#', target: '_blank'},
+        { heading: 'Emal', link: '#', target: '_self'}
+    ];
+
+ul.contact__list
+    for item in contactItems
+        li.contact__item: a.contact__link.type--smallCap(href='#{item.link}', target='#{item.target}') #{item.heading}
