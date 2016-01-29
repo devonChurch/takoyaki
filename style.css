@@ -26,7 +26,669 @@ body {
   font-family: 'roboto-light';
   margin: 0; }
 
+@-webkit-keyframes structural-color {
+  0% {
+    background: red;
+    color: #990000; }
+  1% {
+    background: #ff0f00;
+    color: #990900; }
+  2% {
+    background: #ff1f00;
+    color: #991200; }
+  3% {
+    background: #ff2e00;
+    color: #991c00; }
+  4% {
+    background: #ff3d00;
+    color: #992500; }
+  5% {
+    background: #ff4d00;
+    color: #992e00; }
+  6% {
+    background: #ff5c00;
+    color: #993700; }
+  7% {
+    background: #ff6b00;
+    color: #994000; }
+  8% {
+    background: #ff7a00;
+    color: #994900; }
+  9% {
+    background: #ff8a00;
+    color: #995300; }
+  10% {
+    background: #ff9900;
+    color: #995c00; }
+  11% {
+    background: #ffa800;
+    color: #996500; }
+  12% {
+    background: #ffb800;
+    color: #996e00; }
+  13% {
+    background: #ffc700;
+    color: #997700; }
+  14% {
+    background: #ffd600;
+    color: #998100; }
+  15% {
+    background: #ffe600;
+    color: #998a00; }
+  16% {
+    background: #fff500;
+    color: #999300; }
+  17% {
+    background: #faff00;
+    color: #969900; }
+  18% {
+    background: #ebff00;
+    color: #8d9900; }
+  19% {
+    background: #dbff00;
+    color: #849900; }
+  20% {
+    background: #ccff00;
+    color: #7a9900; }
+  21% {
+    background: #bdff00;
+    color: #719900; }
+  22% {
+    background: #adff00;
+    color: #689900; }
+  23% {
+    background: #9eff00;
+    color: #5f9900; }
+  24% {
+    background: #8fff00;
+    color: #569900; }
+  25% {
+    background: #80ff00;
+    color: #4d9900; }
+  26% {
+    background: #70ff00;
+    color: #439900; }
+  27% {
+    background: #61ff00;
+    color: #3a9900; }
+  28% {
+    background: #52ff00;
+    color: #319900; }
+  29% {
+    background: #42ff00;
+    color: #289900; }
+  30% {
+    background: #33ff00;
+    color: #1f9900; }
+  31% {
+    background: #24ff00;
+    color: #159900; }
+  32% {
+    background: #14ff00;
+    color: #0c9900; }
+  33% {
+    background: #05ff00;
+    color: #039900; }
+  34% {
+    background: #00ff0a;
+    color: #009906; }
+  35% {
+    background: #00ff1a;
+    color: #00990f; }
+  36% {
+    background: #00ff29;
+    color: #009918; }
+  37% {
+    background: #00ff38;
+    color: #009922; }
+  38% {
+    background: #00ff47;
+    color: #00992b; }
+  39% {
+    background: #00ff57;
+    color: #009934; }
+  40% {
+    background: #00ff66;
+    color: #00993d; }
+  41% {
+    background: #00ff75;
+    color: #009946; }
+  42% {
+    background: #00ff85;
+    color: #009950; }
+  43% {
+    background: #00ff94;
+    color: #009959; }
+  44% {
+    background: #00ffa3;
+    color: #009962; }
+  45% {
+    background: #00ffb3;
+    color: #00996b; }
+  46% {
+    background: #00ffc2;
+    color: #009974; }
+  47% {
+    background: #00ffd1;
+    color: #00997d; }
+  48% {
+    background: #00ffe0;
+    color: #009987; }
+  49% {
+    background: #00fff0;
+    color: #009990; }
+  50% {
+    background: cyan;
+    color: #009999; }
+  51% {
+    background: #00f0ff;
+    color: #009099; }
+  52% {
+    background: #00e0ff;
+    color: #008799; }
+  53% {
+    background: #00d1ff;
+    color: #007d99; }
+  54% {
+    background: #00c2ff;
+    color: #007499; }
+  55% {
+    background: #00b3ff;
+    color: #006b99; }
+  56% {
+    background: #00a3ff;
+    color: #006299; }
+  57% {
+    background: #0094ff;
+    color: #005999; }
+  58% {
+    background: #0085ff;
+    color: #005099; }
+  59% {
+    background: #0075ff;
+    color: #004699; }
+  60% {
+    background: #0066ff;
+    color: #003d99; }
+  61% {
+    background: #0057ff;
+    color: #003499; }
+  62% {
+    background: #0047ff;
+    color: #002b99; }
+  63% {
+    background: #0038ff;
+    color: #002299; }
+  64% {
+    background: #0029ff;
+    color: #001899; }
+  65% {
+    background: #001aff;
+    color: #000f99; }
+  66% {
+    background: #000aff;
+    color: #000699; }
+  67% {
+    background: #0500ff;
+    color: #030099; }
+  68% {
+    background: #1400ff;
+    color: #0c0099; }
+  69% {
+    background: #2400ff;
+    color: #150099; }
+  70% {
+    background: #3300ff;
+    color: #1f0099; }
+  71% {
+    background: #4200ff;
+    color: #280099; }
+  72% {
+    background: #5200ff;
+    color: #310099; }
+  73% {
+    background: #6100ff;
+    color: #3a0099; }
+  74% {
+    background: #7000ff;
+    color: #430099; }
+  75% {
+    background: #8000ff;
+    color: #4d0099; }
+  76% {
+    background: #8f00ff;
+    color: #560099; }
+  77% {
+    background: #9e00ff;
+    color: #5f0099; }
+  78% {
+    background: #ad00ff;
+    color: #680099; }
+  79% {
+    background: #bd00ff;
+    color: #710099; }
+  80% {
+    background: #cc00ff;
+    color: #7a0099; }
+  81% {
+    background: #db00ff;
+    color: #840099; }
+  82% {
+    background: #eb00ff;
+    color: #8d0099; }
+  83% {
+    background: #fa00ff;
+    color: #960099; }
+  84% {
+    background: #ff00f5;
+    color: #990093; }
+  85% {
+    background: #ff00e6;
+    color: #99008a; }
+  86% {
+    background: #ff00d6;
+    color: #990081; }
+  87% {
+    background: #ff00c7;
+    color: #990077; }
+  88% {
+    background: #ff00b8;
+    color: #99006e; }
+  89% {
+    background: #ff00a8;
+    color: #990065; }
+  90% {
+    background: #ff0099;
+    color: #99005c; }
+  91% {
+    background: #ff008a;
+    color: #990053; }
+  92% {
+    background: #ff007a;
+    color: #990049; }
+  93% {
+    background: #ff006b;
+    color: #990040; }
+  94% {
+    background: #ff005c;
+    color: #990037; }
+  95% {
+    background: #ff004d;
+    color: #99002e; }
+  96% {
+    background: #ff003d;
+    color: #990025; }
+  97% {
+    background: #ff002e;
+    color: #99001c; }
+  98% {
+    background: #ff001f;
+    color: #990012; }
+  99% {
+    background: #ff000f;
+    color: #990009; }
+  100% {
+    background: red;
+    color: #990000; } }
+
+@keyframes structural-color {
+  0% {
+    background: red;
+    color: #990000; }
+  1% {
+    background: #ff0f00;
+    color: #990900; }
+  2% {
+    background: #ff1f00;
+    color: #991200; }
+  3% {
+    background: #ff2e00;
+    color: #991c00; }
+  4% {
+    background: #ff3d00;
+    color: #992500; }
+  5% {
+    background: #ff4d00;
+    color: #992e00; }
+  6% {
+    background: #ff5c00;
+    color: #993700; }
+  7% {
+    background: #ff6b00;
+    color: #994000; }
+  8% {
+    background: #ff7a00;
+    color: #994900; }
+  9% {
+    background: #ff8a00;
+    color: #995300; }
+  10% {
+    background: #ff9900;
+    color: #995c00; }
+  11% {
+    background: #ffa800;
+    color: #996500; }
+  12% {
+    background: #ffb800;
+    color: #996e00; }
+  13% {
+    background: #ffc700;
+    color: #997700; }
+  14% {
+    background: #ffd600;
+    color: #998100; }
+  15% {
+    background: #ffe600;
+    color: #998a00; }
+  16% {
+    background: #fff500;
+    color: #999300; }
+  17% {
+    background: #faff00;
+    color: #969900; }
+  18% {
+    background: #ebff00;
+    color: #8d9900; }
+  19% {
+    background: #dbff00;
+    color: #849900; }
+  20% {
+    background: #ccff00;
+    color: #7a9900; }
+  21% {
+    background: #bdff00;
+    color: #719900; }
+  22% {
+    background: #adff00;
+    color: #689900; }
+  23% {
+    background: #9eff00;
+    color: #5f9900; }
+  24% {
+    background: #8fff00;
+    color: #569900; }
+  25% {
+    background: #80ff00;
+    color: #4d9900; }
+  26% {
+    background: #70ff00;
+    color: #439900; }
+  27% {
+    background: #61ff00;
+    color: #3a9900; }
+  28% {
+    background: #52ff00;
+    color: #319900; }
+  29% {
+    background: #42ff00;
+    color: #289900; }
+  30% {
+    background: #33ff00;
+    color: #1f9900; }
+  31% {
+    background: #24ff00;
+    color: #159900; }
+  32% {
+    background: #14ff00;
+    color: #0c9900; }
+  33% {
+    background: #05ff00;
+    color: #039900; }
+  34% {
+    background: #00ff0a;
+    color: #009906; }
+  35% {
+    background: #00ff1a;
+    color: #00990f; }
+  36% {
+    background: #00ff29;
+    color: #009918; }
+  37% {
+    background: #00ff38;
+    color: #009922; }
+  38% {
+    background: #00ff47;
+    color: #00992b; }
+  39% {
+    background: #00ff57;
+    color: #009934; }
+  40% {
+    background: #00ff66;
+    color: #00993d; }
+  41% {
+    background: #00ff75;
+    color: #009946; }
+  42% {
+    background: #00ff85;
+    color: #009950; }
+  43% {
+    background: #00ff94;
+    color: #009959; }
+  44% {
+    background: #00ffa3;
+    color: #009962; }
+  45% {
+    background: #00ffb3;
+    color: #00996b; }
+  46% {
+    background: #00ffc2;
+    color: #009974; }
+  47% {
+    background: #00ffd1;
+    color: #00997d; }
+  48% {
+    background: #00ffe0;
+    color: #009987; }
+  49% {
+    background: #00fff0;
+    color: #009990; }
+  50% {
+    background: cyan;
+    color: #009999; }
+  51% {
+    background: #00f0ff;
+    color: #009099; }
+  52% {
+    background: #00e0ff;
+    color: #008799; }
+  53% {
+    background: #00d1ff;
+    color: #007d99; }
+  54% {
+    background: #00c2ff;
+    color: #007499; }
+  55% {
+    background: #00b3ff;
+    color: #006b99; }
+  56% {
+    background: #00a3ff;
+    color: #006299; }
+  57% {
+    background: #0094ff;
+    color: #005999; }
+  58% {
+    background: #0085ff;
+    color: #005099; }
+  59% {
+    background: #0075ff;
+    color: #004699; }
+  60% {
+    background: #0066ff;
+    color: #003d99; }
+  61% {
+    background: #0057ff;
+    color: #003499; }
+  62% {
+    background: #0047ff;
+    color: #002b99; }
+  63% {
+    background: #0038ff;
+    color: #002299; }
+  64% {
+    background: #0029ff;
+    color: #001899; }
+  65% {
+    background: #001aff;
+    color: #000f99; }
+  66% {
+    background: #000aff;
+    color: #000699; }
+  67% {
+    background: #0500ff;
+    color: #030099; }
+  68% {
+    background: #1400ff;
+    color: #0c0099; }
+  69% {
+    background: #2400ff;
+    color: #150099; }
+  70% {
+    background: #3300ff;
+    color: #1f0099; }
+  71% {
+    background: #4200ff;
+    color: #280099; }
+  72% {
+    background: #5200ff;
+    color: #310099; }
+  73% {
+    background: #6100ff;
+    color: #3a0099; }
+  74% {
+    background: #7000ff;
+    color: #430099; }
+  75% {
+    background: #8000ff;
+    color: #4d0099; }
+  76% {
+    background: #8f00ff;
+    color: #560099; }
+  77% {
+    background: #9e00ff;
+    color: #5f0099; }
+  78% {
+    background: #ad00ff;
+    color: #680099; }
+  79% {
+    background: #bd00ff;
+    color: #710099; }
+  80% {
+    background: #cc00ff;
+    color: #7a0099; }
+  81% {
+    background: #db00ff;
+    color: #840099; }
+  82% {
+    background: #eb00ff;
+    color: #8d0099; }
+  83% {
+    background: #fa00ff;
+    color: #960099; }
+  84% {
+    background: #ff00f5;
+    color: #990093; }
+  85% {
+    background: #ff00e6;
+    color: #99008a; }
+  86% {
+    background: #ff00d6;
+    color: #990081; }
+  87% {
+    background: #ff00c7;
+    color: #990077; }
+  88% {
+    background: #ff00b8;
+    color: #99006e; }
+  89% {
+    background: #ff00a8;
+    color: #990065; }
+  90% {
+    background: #ff0099;
+    color: #99005c; }
+  91% {
+    background: #ff008a;
+    color: #990053; }
+  92% {
+    background: #ff007a;
+    color: #990049; }
+  93% {
+    background: #ff006b;
+    color: #990040; }
+  94% {
+    background: #ff005c;
+    color: #990037; }
+  95% {
+    background: #ff004d;
+    color: #99002e; }
+  96% {
+    background: #ff003d;
+    color: #990025; }
+  97% {
+    background: #ff002e;
+    color: #99001c; }
+  98% {
+    background: #ff001f;
+    color: #990012; }
+  99% {
+    background: #ff000f;
+    color: #990009; }
+  100% {
+    background: red;
+    color: #990000; } }
+
+.type--smallCap {
+  font-family: 'roboto-bold';
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
 h1 {
-  font-family: 'signika-bold'; }
+  font-family: 'signika-bold';
+  font-size: 1.7em;
+  margin: 7rem 0 3.5rem;
+  max-width: 40rem; }
+
+h2 {
+  font-family: 'signika-bold';
+  font-size: 1.5em; }
+
+body {
+  background: skyblue;
+  color: skyblue;
+  font-size: 0.875rem; }
+  @media (min-width: 30rem) {
+    body {
+      font-size: 1rem;
+      padding: 1rem; } }
+  @media (min-width: 48rem) {
+    body {
+      font-size: 1.125rem; } }
+  @media (min-width: 64rem) {
+    body {
+      font-size: 1.25rem; } }
+
+.structure--background {
+  background: white;
+  min-height: calc(100vh - 2rem);
+  padding: 6rem 1rem 1rem; }
+
+.structure--column {
+  margin: auto;
+  max-width: 58rem;
+  position: relative; }
+
+.nav {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  width: 100%; }
+  .nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .nav__item {
+    display: inline-block; }
+    .nav__item:nth-of-type(1n+2) {
+      padding-left: 2rem; }
 
 /*# sourceMappingURL=style.css.map*/
