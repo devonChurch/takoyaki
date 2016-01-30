@@ -1,0 +1,53 @@
+.snippet {
+    position: relative;
+
+    &:nth-of-type(1n+2) {
+        margin-top: vertical(medium);
+        padding-top: vertical(medium);
+
+        &:before {
+            background: color(blue, light);
+            content: '';
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100%;
+
+            @include media('>=large') {
+                // -5em = 2rem (color border) + 2rem (content padding) + 1rem (scroll bar)
+                max-width: calc(100vw - 5rem);
+                width: 116%;
+            }
+        }
+    }
+
+    &__heading {
+        color: color(blue, dark);
+        margin: 0 0 -0.25rem;
+
+        @include media('>=small') {
+            padding-right: calc(#{vertical(medium)} + 4.5rem);
+        }
+    }
+
+    &__hashtag {
+        display: block;
+    }
+
+    &__date {
+        color: color(gray, light);
+
+        @include media('>=small') {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .snippet:nth-of-type(1n+2) & {
+                top: vertical(medium);
+            }
+        }
+    }
+}

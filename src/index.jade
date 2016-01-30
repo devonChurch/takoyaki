@@ -9,19 +9,12 @@ include partials/top.jade
 
     include partials/contact.jade
 
-
-    h2 Posts:
-
     section.snippets
         
         for snippet in snippets
             article.snippet
                 h2.snippet__heading #{snippet.heading}
-                h3.snippet__hashtag #{snippet.type}
-                time.snippet__date(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
-
-    hr
-
-
+                span.snippet__hashtag.type--smallCap #{snippet.type}
+                time.snippet__date.type--smallCap(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
 
     include partials/bottom.jade

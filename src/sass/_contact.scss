@@ -2,20 +2,27 @@
 
 	&__list {
 		list-style: none;
-		margin: 0;
+		margin: vertical(large) 0;
 		padding: 0;
 	}
 
 	&__item {
 		display: inline-block;
-		max-width: 30rem;
-
-		// &:nth-of-type(1n+2) {
-		// 	padding-left: 2rem;
-		// }
+		max-width: 20rem;
+		width: 50%;
 	}
 
 	&__link {
+
+	}
+
+	&__icon {
+		$size: 1.8rem;
+		height: $size;
+		width: $size;
+	}
+
+	&__heading {
 
 	}
 }

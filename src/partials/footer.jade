@@ -1,8 +1,6 @@
-footer
-    h3.xxxx: a DevonChur.ch
+footer.footer
+    a.footer__home.footer__link.type--smallCap.button--nav(href='/') DevonChur.ch
     
-    ul
-        li.xxxx: a(href="#") Git Hub
-        li.xxxx: a(href="#") Code Pen
-        li.xxxx: a(href="#") Linked In
-        li.xxxx: a(href="#") Email
+    ul.footer__list
+        for item in contactItems
+            li.footer__item: a.footer__link.type--smallCap.button--nav(href='#{item.link}', target='#{item.target}') #{item.heading}

@@ -1,0 +1,111 @@
+.button {
+
+    &--func {
+        background: transparent;
+        border: 2px solid color(blue, dark);
+        color: color(blue, dark);
+        cursor: pointer;
+        padding: 0.7rem 1.0rem;
+        position: relative;
+        transition: color speed(fast);
+        z-index: 1;
+
+        &:before,
+        &:after {
+            background: color(blue, dark);
+            content: '';
+            display: block;
+            height: 50%;
+            left: 0;
+            position: absolute;
+            transform: scaleY(0);
+            transition: transform speed(fast);
+            width: 100%;
+            z-index: -1;
+        }
+
+        &:before {
+            bottom: 0;
+            transform-origin: center bottom;
+        }
+
+        &:after {
+            top: 0;
+            transform-origin: center top;
+        }
+
+        &:hover,
+        &:focus {
+            color: white;
+
+            &:before,
+            &:after {
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    &--nav {
+        color: inherit;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        transition: {
+            duration: speed(fast);
+            property: color, transform;
+        }
+        z-index: 1;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+
+        // Increase hit box.
+        &:before {
+            $offset: -1rem;
+            bottom: $offset;
+            left: $offset;
+            right: $offset;
+            top:: $offset;
+            z-index: -1;
+        }
+
+        // Underline.
+        &:after {
+            background: currentColor;
+            height: 0.15rem;
+            opacity: 0;
+            left: 0;
+            top: calc(100% + 0.25rem);
+            transform: scaleX(0);
+            transition: {
+                duration: speed(fast);
+                property: opacity, transform;
+            }
+            width: 100%;
+        }
+
+        &:hover,
+        &:focus {
+            $offset: 0.35rem;
+            color: color(blue, dark);
+            transform: translateY(-$offset);
+
+            // Keep the hit box in a static position even though the element is
+            // being transitioned. This avoids the unsightly effect where an
+            // hover state is stuck in and on / off loop at the very top / bottom
+            // edges of a button.
+            &:before{
+                transform: translateY($offset);
+            }
+
+            &:after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+}

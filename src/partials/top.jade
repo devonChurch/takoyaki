@@ -4,6 +4,13 @@ html(lang="en")
 
     head
 
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        title DevonChur.ch
+        meta(name='xxxxxxxxxxxxxxx' content='xxxxxxxxxx')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='apple-touch-icon' href='apple-touch-icon.png')
+        //- Place favicon.ico in the root directory
         link(rel='stylesheet', href="style.css")
 
     body
@@ -11,7 +18,8 @@ html(lang="en")
         div.structure.structure--background
             div.structure.structure--column
 
+                include ./links.jade
                 include ./header.jade
                 include ./generate-date.jade
 
-// - Article starts
+                // - Article starts

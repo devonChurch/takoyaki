@@ -1,3 +1,20 @@
+body {
+    line-height: 1.5;
+
+    @include media('>=small') {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    @include media('>=medium') {
+        font-size: 1.125rem;
+    }
+
+    @include media('>=large') {
+        font-size: 1.25rem;
+    }
+}
+
 .type {
 
     &--smallCap {
@@ -11,17 +28,18 @@
 
 
 h1 {
+    color: color(blue, dark);
     font: {
         family: 'signika-bold';
-        size: 1.7em;
+        size: 1.7rem;
     }
-    margin: 7rem 0 3.5rem;
+    margin: vertical(large) 0 vertical(medium);
     max-width: 40rem;
 }
 
 h2 {
     font: {
         family: 'signika-bold';
-        size: 1.5em;
+        size: 1.15rem;
     }
 }
