@@ -636,25 +636,12 @@ body {
     background: red;
     color: #990000; } }
 
-.type--smallCap {
-  font-family: 'roboto-bold';
-  font-size: 0.75rem;
-  text-transform: uppercase; }
-
-h1 {
-  font-family: 'signika-bold';
-  font-size: 1.7em;
-  margin: 7rem 0 3.5rem;
-  max-width: 40rem; }
-
-h2 {
-  font-family: 'signika-bold';
-  font-size: 1.5em; }
+body {
+  background: #3ea8f4;
+  color: #3ea8f4; }
 
 body {
-  background: skyblue;
-  color: skyblue;
-  font-size: 0.875rem; }
+  line-height: 1.5; }
   @media (min-width: 30rem) {
     body {
       font-size: 1rem;
@@ -666,22 +653,123 @@ body {
     body {
       font-size: 1.25rem; } }
 
+.type--smallCap {
+  font-family: 'roboto-bold';
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
+h1 {
+  color: #19415a;
+  font-family: 'signika-bold';
+  font-size: 1.7rem;
+  margin: 8vh 0 4vh;
+  max-width: 40rem; }
+
+h2 {
+  font-family: 'signika-bold';
+  font-size: 1.15rem; }
+
+.button--func {
+  background: transparent;
+  border: 0;
+  color: #19415a;
+  cursor: pointer;
+  padding: 0.7rem 1.0rem;
+  position: relative; }
+  .button--func:before {
+    border: 2px solid #19415a;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    transition: border 0.25s; }
+  .button--func:hover:before, .button--func:focus:before {
+    border-width: 6px;
+    bottom: -0.1rem;
+    left: -0.1rem;
+    right: -0.1rem;
+    top: -0.1rem; }
+
+.button--nav {
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+  z-index: 1; }
+  .button--nav:before, .button--nav:after {
+    content: '';
+    display: block;
+    position: absolute; }
+  .button--nav:before {
+    bottom: -1rem;
+    left: -1rem;
+    right: -1rem;
+    top: -1rem;
+    z-index: -1; }
+  .button--nav:after {
+    background: currentColor;
+    height: 0.15rem;
+    opacity: 0;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    transition-duration: 0.25s;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    width: 100%; }
+  .button--nav:hover, .button--nav:focus {
+    color: #19415a;
+    -webkit-transform: translateY(-0.35rem);
+            transform: translateY(-0.35rem); }
+    .button--nav:hover:before, .button--nav:focus:before {
+      -webkit-transform: translateY(0.35rem);
+              transform: translateY(0.35rem); }
+    .button--nav:hover:after, .button--nav:focus:after {
+      opacity: 1;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
+
 .structure--background {
   background: white;
-  min-height: calc(100vh - 2rem);
-  padding: 6rem 1rem 1rem; }
+  padding: 0 1rem 1rem; }
+  @media (min-width: 30rem) {
+    .structure--background {
+      min-height: calc(100vh - 2rem);
+      padding: 1rem; } }
 
 .structure--column {
   margin: auto;
   max-width: 58rem;
+  min-height: calc(100vh - 2rem);
   position: relative; }
+  @media (min-width: 30rem) {
+    .structure--column {
+      min-height: calc(100vh - 4rem);
+      padding-bottom: calc(8vh + 1rem); } }
+
+.header {
+  padding-top: 8vh; }
 
 .nav {
   position: absolute;
   right: 0;
   text-align: right;
-  top: 0;
-  width: 100%; }
+  top: 8vh;
+  width: calc(100% - 6rem); }
+  @media (max-width: 29.9rem) {
+    .nav {
+      display: none; } }
   .nav__list {
     list-style: none;
     margin: 0;
@@ -690,5 +778,97 @@ body {
     display: inline-block; }
     .nav__item:nth-of-type(1n+2) {
       padding-left: 2rem; }
+  .nav__link {
+    vertical-align: top; }
+
+.contact__list {
+  list-style: none;
+  margin: 8vh 0;
+  padding: 0; }
+
+.contact__item {
+  display: inline-block;
+  max-width: 20rem;
+  width: 50%; }
+
+.contact__icon {
+  height: 1.8rem;
+  width: 1.8rem; }
+
+.snippet {
+  position: relative; }
+  .snippet:nth-of-type(1n+2) {
+    margin-top: 4vh;
+    padding-top: 4vh; }
+    .snippet:nth-of-type(1n+2):before {
+      background: #c5e5fc;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 100%; }
+      @media (min-width: 64rem) {
+        .snippet:nth-of-type(1n+2):before {
+          max-width: calc(100vw - 5rem);
+          width: 116%; } }
+  .snippet__heading {
+    color: #19415a;
+    margin: 0 0 -0.25rem; }
+    @media (min-width: 30rem) {
+      .snippet__heading {
+        padding-right: calc(4vh + 4.5rem); } }
+  .snippet__date {
+    color: #cccccc; }
+    @media (min-width: 30rem) {
+      .snippet__date {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .snippet:nth-of-type(1n+2) .snippet__date {
+          top: 4vh; } }
+
+.functionality {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8vh; }
+
+.footer {
+  color: #cccccc; }
+  @media (max-width: 29.9rem) {
+    .footer {
+      padding-top: 8vh; } }
+  @media (min-width: 30rem) {
+    .footer {
+      bottom: 0;
+      position: absolute;
+      width: 100%; } }
+  .footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    @media (min-width: 30rem) {
+      .footer__list {
+        position: absolute;
+        right: 0;
+        top: 0; } }
+  .footer__item {
+    display: inline-block; }
+    @media (max-width: 29.9rem) {
+      .footer__item {
+        padding-top: 1rem;
+        width: 50%; } }
+    @media (min-width: 30rem) {
+      .footer__item {
+        text-align: right; }
+        .footer__item:nth-of-type(1n+2) {
+          padding-left: 2rem; } }
 
 /*# sourceMappingURL=style.css.map*/
