@@ -1,6 +1,5 @@
 include partials/snippets.jade
 include partials/top.jade
-    include partials/nav.jade
 
     h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
@@ -11,10 +10,11 @@ include partials/top.jade
 
     section.snippets
         
-        for snippet in snippets
+        for item in snippets
+            hr.structure--divider
             article.snippet
-                h2.snippet__heading #{snippet.heading}
-                span.snippet__hashtag.type--smallCap #{snippet.type}
-                time.snippet__date.type--smallCap(datetime='#{snippet.date.numFormat}') #{snippet.date.stringFormat}
+                a.snippet__link(href='#{item.href}.html'): h2.snippet__heading #{item.heading}
+                span.snippet__hashtag.type--smallCap #{item.type}
+                time.snippet__date.type--smallCap(datetime='#{item.date.numFormat}') #{item.date.stringFormat}
 
     include partials/bottom.jade

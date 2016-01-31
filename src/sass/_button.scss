@@ -91,7 +91,7 @@
         &:hover,
         &:focus {
             $offset: 0.35rem;
-            color: color(blue, dark);
+            color: color(gray, dark);
             transform: translateY(-$offset);
 
             // Keep the hit box in a static position even though the element is

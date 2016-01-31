@@ -13,13 +13,15 @@ html(lang="en")
         //- Place favicon.ico in the root directory
         link(rel='stylesheet', href="style.css")
 
-    body
+    - page = post ? 'post' : 'home'
+    body(data-page='#{page}')
     
         div.structure.structure--background
             div.structure.structure--column
 
                 include ./links.jade
                 include ./header.jade
+                include ./nav.jade
                 include ./generate-date.jade
 
                 // - Article starts

@@ -1,5 +1,7 @@
 h1.post__heading #{post.heading}
 
-h2.post__hashtag #{post.type}
+div.post__details
+    span.post__hashtag.type--smallCap #{post.type}
+    time.post__date.type--smallCap(datetime='#{post.date.numFormat}') #{post.date.stringFormat}
 
-time.post__date(datetime='#{post.date.numFormat}') #{post.date.stringFormat}
+hr.structure--divider

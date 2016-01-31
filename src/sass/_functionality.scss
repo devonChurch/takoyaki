@@ -1,5 +1,10 @@
 .functionality {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: vertical(large);
+
+    &__scrollToTop {
+        width: 2.8rem;
+    }
 }

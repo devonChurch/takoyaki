@@ -1,28 +1,31 @@
+.snippets .structure--divider:first-of-type {
+    display: none;
+}
+
 .snippet {
     position: relative;
 
-    &:nth-of-type(1n+2) {
-        margin-top: vertical(medium);
-        padding-top: vertical(medium);
+    &__link {
+        text-decoration: none;
 
-        &:before {
-            background: color(blue, light);
-            content: '';
-            display: block;
-            height: 1px;
-            left: 50%;
-            position: absolute;
-            top: 0;
-            transform: translateX(-50%);
-            width: 100%;
+        &:hover,
+        &:focus {
 
-            @include media('>=large') {
-                // -5em = 2rem (color border) + 2rem (content padding) + 1rem (scroll bar)
-                max-width: calc(100vw - 5rem);
-                width: 116%;
+            .snippet__heading {
+                color: color(blue);
+            }
+
+            & ~ .snippet__hashtag {
+                color: color(blue, dark);
             }
         }
     }
+
+    // &__heading,
+    // &__hashtag,
+    // &__date {
+    //     transition: color speed(fast);
+    // }
 
     &__heading {
         color: color(blue, dark);

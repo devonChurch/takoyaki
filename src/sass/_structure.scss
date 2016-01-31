@@ -21,4 +21,30 @@
             padding-bottom: calc(#{vertical(large)} + 1rem);
         }
 	}
+
+	&--divider {
+		$height: 1px;
+		border: 0;
+		height: $height;
+		margin: vertical(medium) auto;
+		position: relative;
+
+		&:before {
+			background: color(blue, light);
+			content: '';
+			display: block;
+			height: $height;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			transform: translateX(-50%);
+			width: 100%;
+
+			@include media('>=large') {
+				// -5em = 2rem (color border) + 2rem (content padding) + 1rem (scroll bar)
+				max-width: calc(100vw - 5rem);
+				width: 116%;
+			}
+		}
+	}
 }

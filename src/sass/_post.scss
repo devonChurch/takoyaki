@@ -1,0 +1,23 @@
+.post {
+
+    &__heading {
+
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+
+        + .structure--divider {
+            margin-top: vertical(small);
+        }
+    }
+
+    &__hashtag {
+        color: color(blue, dark);
+    }
+
+    &__date {
+        color: color(gray, light);
+    }
+}

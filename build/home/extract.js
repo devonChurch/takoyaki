@@ -39,7 +39,7 @@ function distillData(post, data) {
 
     return `
     {
-        href: ${post},
+        href: '${post}',
         ${extractData(data)}
     },
 `;
@@ -48,8 +48,8 @@ function distillData(post, data) {
 
 function extractData(data) {
 
-    const open = 'const post = {';
-    const close = `};`;
+    const open = 'post = {';
+    const close = '} //- post ]';
     const start = data.indexOf(open) + open.length;
     data = data.substr(start);
     const end = data.indexOf(close);
@@ -62,7 +62,7 @@ function constructSnippets(snippets) {
 
     return `
 -
-    const snippets = [
+    snippets = [
         ${snippets}
     ];
 `;
