@@ -641,23 +641,23 @@ body {
 
 body {
   color: #3ea8f4; }
-  @media (min-width: 30rem) {
+  @media (min-width: 30em) {
     body {
       background: #3ea8f4; } }
 
 body {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5; }
-  @media (min-width: 30rem) {
+  @media (min-width: 30em) {
     body {
-      font-size: 1.1rem;
-      padding: 1rem; } }
-  @media (min-width: 48rem) {
+      font-size: 1.1em;
+      padding: 1em; } }
+  @media (min-width: 48em) {
     body {
-      font-size: 1.2rem; } }
-  @media (min-width: 64rem) {
+      font-size: 1.2em; } }
+  @media (min-width: 64em) {
     body {
-      font-size: 1.3rem; } }
+      font-size: 1.3em; } }
 
 .type--smallCap {
   font-family: 'roboto-bold';
@@ -673,7 +673,7 @@ h1 {
   font-family: 'signika-bold';
   font-size: 1.7em;
   margin: 8vh 0 4vh;
-  max-width: 40rem; }
+  max-width: 20em; }
 
 h2 {
   font-family: 'signika-bold';
@@ -684,7 +684,7 @@ h2 {
   border: 2px solid #19415a;
   color: #19415a;
   cursor: pointer;
-  padding: 0.7rem 1.0rem;
+  padding: 0.7em 1.0em;
   position: relative;
   transition: color 0.25s;
   z-index: 1; }
@@ -731,17 +731,17 @@ h2 {
     display: block;
     position: absolute; }
   .button--nav:before {
-    bottom: -1rem;
-    left: -1rem;
-    right: -1rem;
-    top: -1rem;
+    bottom: -1em;
+    left: -1em;
+    right: -1em;
+    top: -1em;
     z-index: -1; }
   .button--nav:after {
     background: currentColor;
-    height: 0.15rem;
+    height: 0.15em;
     opacity: 0;
     left: 0;
-    top: calc(100% + 0.25rem);
+    top: calc(100% + 0.25em);
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     transition-duration: 0.25s;
@@ -751,11 +751,11 @@ h2 {
     width: 100%; }
   .button--nav:hover, .button--nav:focus {
     color: #4c4c4c;
-    -webkit-transform: translateY(-0.35rem);
-            transform: translateY(-0.35rem); }
+    -webkit-transform: translateY(-0.35em);
+            transform: translateY(-0.35em); }
     .button--nav:hover:before, .button--nav:focus:before {
-      -webkit-transform: translateY(0.35rem);
-              transform: translateY(0.35rem); }
+      -webkit-transform: translateY(0.35em);
+              transform: translateY(0.35em); }
     .button--nav:hover:after, .button--nav:focus:after {
       opacity: 1;
       -webkit-transform: scaleX(1);
@@ -763,21 +763,21 @@ h2 {
 
 .structure--background {
   background: white;
-  padding: 0 1rem 1rem; }
-  @media (min-width: 30rem) {
+  padding: 0 1em 1em; }
+  @media (min-width: 30em) {
     .structure--background {
-      min-height: calc(100vh - 2rem);
-      padding: 1rem; } }
+      min-height: calc(100vh - 2em);
+      padding: 1em; } }
 
 .structure--column {
   margin: auto;
-  max-width: 58rem;
-  min-height: calc(100vh - 2rem);
+  max-width: 48em;
+  min-height: calc(100vh - 2em);
   position: relative; }
-  @media (min-width: 30rem) {
+  @media (min-width: 30em) {
     .structure--column {
-      min-height: calc(100vh - 4rem);
-      padding-bottom: calc(8vh + 1rem); } }
+      min-height: calc(100vh - 4em);
+      padding-bottom: calc(8vh + 1em); } }
 
 .structure--divider {
   border: 0;
@@ -795,9 +795,9 @@ h2 {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     width: 100%; }
-    @media (min-width: 64rem) {
+    @media (min-width: 64em) {
       .structure--divider:before {
-        max-width: calc(100vw - 5rem);
+        max-width: calc(100vw - 5em);
         width: 116%; } }
 
 .header {
@@ -810,8 +810,8 @@ h2 {
   right: 0;
   text-align: right;
   top: 8vh;
-  width: calc(100% - 6rem); }
-  @media (max-width: 29.9rem) {
+  width: calc(100% - 6em); }
+  @media (max-width: 29.99em) {
     .nav {
       display: none; } }
   .nav__list {
@@ -821,7 +821,7 @@ h2 {
   .nav__item {
     display: inline-block; }
     .nav__item:nth-of-type(1n+2) {
-      padding-left: 2rem; }
+      padding-left: 2em; }
   .nav__link {
     vertical-align: top; }
 
@@ -832,12 +832,12 @@ h2 {
 
 .contact__item {
   display: inline-block;
-  max-width: 20rem;
+  max-width: 20em;
   width: 50%; }
 
 .contact__icon {
-  height: 1.8rem;
-  width: 1.8rem; }
+  height: 1.8em;
+  width: 1.8em; }
 
 .snippets .structure--divider:first-of-type {
   display: none; }
@@ -852,15 +852,15 @@ h2 {
       color: #19415a; }
   .snippet__heading {
     color: #19415a;
-    margin: 0 0 -0.25rem; }
-    @media (min-width: 30rem) {
+    margin: 0 0 -0.25em; }
+    @media (min-width: 30em) {
       .snippet__heading {
-        padding-right: calc(4vh + 4.5rem); } }
+        padding-right: calc(4vh + 4.5em); } }
   .snippet__hashtag {
     display: block; }
   .snippet__date {
     color: #cccccc; }
-    @media (min-width: 30rem) {
+    @media (min-width: 30em) {
       .snippet__date {
         position: absolute;
         right: 0;
@@ -895,10 +895,10 @@ h2 {
 
 .tech__item {
   line-height: 3; }
-  @media (min-width: 30rem) {
+  @media (min-width: 30em) {
     .tech__item {
       display: inline-block;
-      max-width: 20rem;
+      max-width: 20em;
       width: 50%; } }
 
 .functionality {
@@ -913,14 +913,14 @@ h2 {
           justify-content: space-between;
   margin-top: 8vh; }
   .functionality__scrollToTop {
-    width: 2.8rem; }
+    width: 2.8em; }
 
 .footer {
   color: #cccccc; }
-  @media (max-width: 29.9rem) {
+  @media (max-width: 29.99em) {
     .footer {
       padding-top: 8vh; } }
-  @media (min-width: 30rem) {
+  @media (min-width: 30em) {
     .footer {
       bottom: 0;
       position: absolute;
@@ -929,21 +929,21 @@ h2 {
     list-style: none;
     margin: 0;
     padding: 0; }
-    @media (min-width: 30rem) {
+    @media (min-width: 30em) {
       .footer__list {
         position: absolute;
         right: 0;
         top: 0; } }
   .footer__item {
     display: inline-block; }
-    @media (max-width: 29.9rem) {
+    @media (max-width: 29.99em) {
       .footer__item {
-        padding-top: 1rem;
+        padding-top: 1em;
         width: 50%; } }
-    @media (min-width: 30rem) {
+    @media (min-width: 30em) {
       .footer__item {
         text-align: right; }
         .footer__item:nth-of-type(1n+2) {
-          padding-left: 2rem; } }
+          padding-left: 2em; } }
 
 /*# sourceMappingURL=style.css.map*/
