@@ -10,15 +10,43 @@
 		display: inline-block;
 		max-width: 20em;
 		width: 50%;
+
+		&:nth-of-type(1n+3) {
+			margin-top: vertical(small);
+		}
 	}
 
 	&__link {
+		color: color(blue);
+		text-decoration: none;
 
+		&:hover,
+		&:focus {
+
+			.contact__icon {
+				background: color(blue, dark);
+			}
+
+			.contact__heading {
+				color: color(blue, dark);
+			}
+		}
+	}
+
+	&__icon,
+	&__heading {
+		display: inline;
+		transition-property: background, color;
+		transition: speed(fast);
+		vertical-align: middle;
 	}
 
 	&__icon {
 		$size: 1.8em;
+		background: color(blue);
+		fill: white;
 		height: $size;
+		margin-right: 0.5em;
 		width: $size;
 	}
 

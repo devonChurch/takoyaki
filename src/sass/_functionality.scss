@@ -5,6 +5,20 @@
     margin-top: vertical(large);
 
     &__scrollToTop {
-        width: 2.8em;
+        padding: 0;
+        position: relative;
+
+        &:hover &__icon,
+        &:focus &__icon {
+            fill: white;
+        }
+
+        &__icon {
+            $size: 3em;
+            fill: color(blue, dark);
+            height: 3em;
+            transition: fill speed(fast);
+            width: 3em;
+        }
     }
 }

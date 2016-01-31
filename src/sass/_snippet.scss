@@ -47,10 +47,6 @@
             position: absolute;
             right: 0;
             top: 0;
-
-            .snippet:nth-of-type(1n+2) & {
-                top: vertical(medium);
-            }
         }
     }
 }
