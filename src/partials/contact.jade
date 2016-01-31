@@ -1,5 +1,5 @@
 ul.contact.contact__list
     for item in contactItems
         li.contact__item: a.contact__link(href='#{item.link}', target='#{item.target}')
-            svg.contact__icon
+            svg.contact__icon: use(xlink:href='##{item.svg}')
             span.contact__heading.type--smallCap #{item.heading}

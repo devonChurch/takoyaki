@@ -26,6 +26,9 @@ body {
   font-family: 'roboto-light';
   margin: 0; }
 
+.iconSprite {
+  display: none; }
+
 @-webkit-keyframes structural-color {
   0% {
     background: red;
@@ -637,8 +640,10 @@ body {
     color: #990000; } }
 
 body {
-  background: #3ea8f4;
   color: #3ea8f4; }
+  @media (min-width: 30rem) {
+    body {
+      background: #3ea8f4; } }
 
 body {
   font-size: 1rem;
@@ -879,15 +884,22 @@ h2 {
 .post__date {
   color: #cccccc; }
 
+.tech__heading {
+  color: #19415a;
+  margin: 8vh 0 1vh; }
+
 .tech__list {
   list-style: none;
-  margin: 8vh 0;
+  margin: 0;
   padding: 0; }
 
 .tech__item {
-  display: inline-block;
-  max-width: 20rem;
-  width: 50%; }
+  line-height: 3; }
+  @media (min-width: 30rem) {
+    .tech__item {
+      display: inline-block;
+      max-width: 20rem;
+      width: 50%; } }
 
 .functionality {
   display: -webkit-flex;
