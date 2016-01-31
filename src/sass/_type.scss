@@ -1,18 +1,18 @@
 body {
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
 
     @include media('>=small') {
-        font-size: 1.1rem;
-        padding: 1rem;
+        font-size: 1.1em;
+        padding: 1em;
     }
 
     @include media('>=medium') {
-        font-size: 1.2rem;
+        font-size: 1.2em;
     }
 
     @include media('>=large') {
-        font-size: 1.3rem;
+        font-size: 1.3em;
     }
 }
 
@@ -40,7 +40,7 @@ h1 {
         size: 1.7em;
     }
     margin: vertical(large) 0 vertical(medium);
-    max-width: 40rem;
+    max-width: 20em;
 }
 
 h2 {

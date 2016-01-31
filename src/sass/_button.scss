@@ -5,7 +5,7 @@
         border: 2px solid color(blue, dark);
         color: color(blue, dark);
         cursor: pointer;
-        padding: 0.7rem 1.0rem;
+        padding: 0.7em 1.0em;
         position: relative;
         transition: color speed(fast);
         z-index: 1;
@@ -65,7 +65,7 @@
 
         // Increase hit box.
         &:before {
-            $offset: -1rem;
+            $offset: -1em;
             bottom: $offset;
             left: $offset;
             right: $offset;
@@ -76,10 +76,10 @@
         // Underline.
         &:after {
             background: currentColor;
-            height: 0.15rem;
+            height: 0.15em;
             opacity: 0;
             left: 0;
-            top: calc(100% + 0.25rem);
+            top: calc(100% + 0.25em);
             transform: scaleX(0);
             transition: {
                 duration: speed(fast);
@@ -90,7 +90,7 @@
 
         &:hover,
         &:focus {
-            $offset: 0.35rem;
+            $offset: 0.35em;
             color: color(gray, dark);
             transform: translateY(-$offset);
 

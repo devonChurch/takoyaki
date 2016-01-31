@@ -2,23 +2,23 @@
 
 	&--background {
 		background: white;
-		padding: 0 1rem 1rem;
+		padding: 0 1em 1em;
 
         @include media('>=small') {
-            min-height: calc(100vh - 2rem);
-            padding: 1rem;
+            min-height: calc(100vh - 2em);
+            padding: 1em;
         }
 	}
 
 	&--column {
 		margin: auto;
-		max-width: 58rem;
-        min-height: calc(100vh - 2rem);
+		max-width: 48em;
+        min-height: calc(100vh - 2em);
         position: relative;
 
         @include media('>=small') {
-            min-height: calc(100vh - 4rem);
-            padding-bottom: calc(#{vertical(large)} + 1rem);
+            min-height: calc(100vh - 4em);
+            padding-bottom: calc(#{vertical(large)} + 1em);
         }
 	}
 
@@ -41,8 +41,8 @@
 			width: 100%;
 
 			@include media('>=large') {
-				// -5em = 2rem (color border) + 2rem (content padding) + 1rem (scroll bar)
-				max-width: calc(100vw - 5rem);
+				// -5em = 2em (color border) + 2em (content padding) + 1em (scroll bar)
+				max-width: calc(100vw - 5em);
 				width: 116%;
 			}
 		}

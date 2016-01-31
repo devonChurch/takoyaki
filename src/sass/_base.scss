@@ -11,6 +11,8 @@ body {
     margin: 0;
 }
 
+// We are pulling out the <symbol> elements to use throughout the site however
+// we do not want the master sprite to be visible.
 .iconSprite {
     display: none;
 }

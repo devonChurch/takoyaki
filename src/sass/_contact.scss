@@ -8,7 +8,7 @@
 
 	&__item {
 		display: inline-block;
-		max-width: 20rem;
+		max-width: 20em;
 		width: 50%;
 	}
 
@@ -17,7 +17,7 @@
 	}
 
 	&__icon {
-		$size: 1.8rem;
+		$size: 1.8em;
 		height: $size;
 		width: $size;
 	}

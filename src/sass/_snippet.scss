@@ -29,10 +29,10 @@
 
     &__heading {
         color: color(blue, dark);
-        margin: 0 0 -0.25rem;
+        margin: 0 0 -0.25em;
 
         @include media('>=small') {
-            padding-right: calc(#{vertical(medium)} + 4.5rem);
+            padding-right: calc(#{vertical(medium)} + 4.5em);
         }
     }
 

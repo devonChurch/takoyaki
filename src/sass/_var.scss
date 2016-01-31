@@ -14,9 +14,9 @@ $palette: (
 }
 
 $media: (
-    small: 30rem,
-    medium: 48rem,
-    large: 64rem
+    small: 30em,
+    medium: 48em,
+    large: 64em
 );
 
 @function media($size) {
