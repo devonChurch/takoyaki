@@ -1,17 +1,17 @@
-$palette: (
-    pink: #E91E63,
-    purple: #673AB7,
-    blue: #03A9F4,
-    green: #009688,
-    yellow: #FFEB3B,
-    orange: #FF5722,
-    brown: #795548,
-    gray: #9E9E9E
-);
-
-@function palette($color) {
-    @return map-get($palette, $color);
-}
+// $palette: (
+//     pink: #E91E63,
+//     purple: #673AB7,
+//     blue: #03A9F4,
+//     green: #009688,
+//     yellow: #FFEB3B,
+//     orange: #FF5722,
+//     brown: #795548,
+//     gray: #9E9E9E
+// );
+//
+// @function palette($color) {
+//     @return map-get($palette, $color);
+// }
 
 $media: (
     small: 30em,
@@ -54,6 +54,9 @@ $color: (
         light: #cccccc,
         medium: #989898,
         dark: #4c4c4c
+    ),
+    pink: (
+        medium: #E91E63
     )
 );
 

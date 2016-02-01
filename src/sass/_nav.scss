@@ -30,3 +30,46 @@
 		vertical-align: top;
 	}
 }
+
+// Used in conjunction with the nav.js setup where clicking on a hash link bring
+// the relevant content into view. Below we list our hash links and their active
+// state in addition to diving the irrelevant content a dormant opacity value.
+.structure--column > * {
+	transition-property: opacity, transform;
+	transition: speed(fast);
+
+	body[data-hash] & {
+		opacity: 0.2;
+	}
+}
+
+$hash: 'about', 'contact', 'work';
+
+@each $item in $hash {
+
+	body[data-hash="##{$item}"] .structure--column > ##{$item} {
+		opacity: 1;
+		transform: translateY(3.5em);
+
+		&:before {
+			opacity: 1;
+		}
+	}
+
+	##{$item} {
+		position: relative;
+
+		&:before {
+			@extend .type--smallCap;
+			bottom: calc(100% + 1em);
+			color: color(pink);
+			content: '#{$item}';
+			display: block;
+			left: 0;
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			transition: opacity speed(fast);
+		}
+	}
+}

@@ -34,8 +34,7 @@
             transform-origin: center top;
         }
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: white;
 
             &:before,
@@ -88,8 +87,7 @@
             width: 100%;
         }
 
-        &:hover,
-        &:focus {
+        &:hover {
             $offset: 0.35em;
             color: color(gray, dark);
             transform: translateY(-$offset);

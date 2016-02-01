@@ -1,5 +1,7 @@
+// https://devonchurch.github.io/takoyaki/
+
 // [ JS
-require('./js/destination');
+require('./js/nav');
 require('./js/transition');
 // JS ]
 
