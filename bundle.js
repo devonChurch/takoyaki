@@ -10072,7 +10072,7 @@
 	            helper.$body.attr('data-hash', hash);
 	            setTimeout(function () {
 	                return helper.$body.removeAttr('data-hash');
-	            }, 2000);
+	            }, 1000);
 	        }
 	    }, {
 	        key: 'scrollToSection',
@@ -10100,7 +10100,6 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var $ = __webpack_require__(2);
 	var helper = __webpack_require__(3);
 	
 	var Scroll = (function () {

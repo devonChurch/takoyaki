@@ -75,6 +75,7 @@ h2 {
   border: 2px solid #19415a;
   color: #19415a;
   cursor: pointer;
+  outline: 0;
   padding: 0.7em 1.0em;
   position: relative;
   transition: color 0.25s;
@@ -336,15 +337,20 @@ body[data-hash="#work"] .structure--column > #work {
   .snippet__link {
     text-decoration: none; }
     .snippet__link:hover .snippet__heading, .snippet__link:focus .snippet__heading {
-      color: #3ea8f4; }
+      color: #E91E63; }
     .snippet__link:hover ~ .snippet__hashtag, .snippet__link:focus ~ .snippet__hashtag {
-      color: #19415a; }
+      color: #79143D; }
+    .snippet__link:hover ~ .snippet__date, .snippet__link:focus ~ .snippet__date {
+      color: #FFBAD9; }
+  .snippet__heading, .snippet__hashtag, .snippet__date {
+    transition: color 0.25s; }
   .snippet__heading {
     color: #19415a;
+    display: inline-block;
     margin: 0 0 -0.25em; }
     @media (min-width: 30em) {
       .snippet__heading {
-        padding-right: calc(4vh + 4.5em); } }
+        max-width: calc(100% - 4vh - 4.5em); } }
   .snippet__hashtag {
     display: block; }
   .snippet__date {
@@ -402,8 +408,7 @@ body[data-hash="#work"] .structure--column > #work {
   .functionality__scrollToTop {
     padding: 0;
     position: relative; }
-    .functionality__scrollToTop:hover .functionality__scrollToTop__icon,
-    .functionality__scrollToTop:focus .functionality__scrollToTop__icon {
+    .functionality__scrollToTop:hover .functionality__scrollToTop__icon {
       fill: white; }
     .functionality__scrollToTop__icon {
       fill: #19415a;
