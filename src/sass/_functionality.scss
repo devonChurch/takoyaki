@@ -8,8 +8,7 @@
         padding: 0;
         position: relative;
 
-        &:hover &__icon,
-        &:focus &__icon {
+        &:hover &__icon {
             fill: white;
         }
 

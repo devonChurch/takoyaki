@@ -7,7 +7,6 @@ const Navigation = class {
 
         console.log('Navigation....');
 
-        this.$wrapper = $('html, body');
         this.$nav = $('nav');
         this.active = false;
         this.resize();
@@ -66,7 +65,7 @@ const Navigation = class {
         const $section = $(hash);
         const top = $section.offset().top;
 
-        this.$wrapper.animate({scrollTop: top}, helper.speed.fast);
+        helper.$page.animate({scrollTop: top}, helper.speed.fast);
 
     }
 

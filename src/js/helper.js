@@ -13,5 +13,5 @@ exports.media = {
 };
 
 exports.$window = $(window);
-
+exports.$page = $('html, body');
 exports.$body = $('body');
