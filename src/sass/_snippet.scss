@@ -12,27 +12,32 @@
         &:focus {
 
             .snippet__heading {
-                color: color(blue);
+                color: color(pink);
             }
 
             & ~ .snippet__hashtag {
-                color: color(blue, dark);
+                color: color(pink, dark);
+            }
+
+            & ~ .snippet__date {
+                color: color(pink, light);
             }
         }
     }
 
-    // &__heading,
-    // &__hashtag,
-    // &__date {
-    //     transition: color speed(fast);
-    // }
+    &__heading,
+    &__hashtag,
+    &__date {
+        transition: color speed(fast);
+    }
 
     &__heading {
         color: color(blue, dark);
+        display: inline-block;
         margin: 0 0 -0.25em;
 
         @include media('>=small') {
-            padding-right: calc(#{vertical(medium)} + 4.5em);
+            max-width: calc(100% - 4vh - 4.5em);
         }
     }
 

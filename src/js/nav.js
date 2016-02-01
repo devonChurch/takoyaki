@@ -56,7 +56,7 @@ const Navigation = class {
     focusSection(hash) {
 
         helper.$body.attr('data-hash', hash);
-        setTimeout(() => helper.$body.removeAttr('data-hash'), 2000);
+        setTimeout(() => helper.$body.removeAttr('data-hash'), 1000);
 
     }
 
