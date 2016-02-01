@@ -101,9 +101,9 @@ h2 {
     top: 0;
     -webkit-transform-origin: center top;
             transform-origin: center top; }
-  .button--func:hover, .button--func:focus {
+  .button--func:hover {
     color: white; }
-    .button--func:hover:before, .button--func:hover:after, .button--func:focus:before, .button--func:focus:after {
+    .button--func:hover:before, .button--func:hover:after {
       -webkit-transform: scaleY(1);
               transform: scaleY(1); }
 
@@ -140,14 +140,14 @@ h2 {
     transition-property: opacity, transform;
     transition-property: opacity, transform, -webkit-transform;
     width: 100%; }
-  .button--nav:hover, .button--nav:focus {
+  .button--nav:hover {
     color: #4c4c4c;
     -webkit-transform: translateY(-0.35em);
             transform: translateY(-0.35em); }
-    .button--nav:hover:before, .button--nav:focus:before {
+    .button--nav:hover:before {
       -webkit-transform: translateY(0.35em);
               transform: translateY(0.35em); }
-    .button--nav:hover:after, .button--nav:focus:after {
+    .button--nav:hover:after {
       opacity: 1;
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
@@ -226,6 +226,20 @@ h2 {
       padding-left: 2em; }
   .nav__link {
     vertical-align: top; }
+
+.structure--column > * {
+  transition: opacity 0.25s; }
+  body[data-hash] .structure--column > * {
+    opacity: 0.2; }
+
+body[data-hash="#about"] .structure--column > #about {
+  opacity: 1; }
+
+body[data-hash="#contact"] .structure--column > #contact {
+  opacity: 1; }
+
+body[data-hash="#work"] .structure--column > #work {
+  opacity: 1; }
 
 .contact__list {
   list-style: none;

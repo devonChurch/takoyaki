@@ -48,32 +48,20 @@
 	'use strict';
 	
 	__webpack_require__(1);
-	__webpack_require__(2);
+	__webpack_require__(4);
 	// JS ]
 	
-	__webpack_require__(4);
+	__webpack_require__(5);
 	
-	__webpack_require__(14);
+	__webpack_require__(15);
 	
 	/* [ Posts */
-	__webpack_require__(15);
 	__webpack_require__(16);
-	__webpack_require__(17); /* Posts ] */
+	__webpack_require__(17);
+	__webpack_require__(18); /* Posts ] */
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	console.log('Destination....');
-	
-	// const type = require('./type');
-
-	// Are we on index OR a post page....
-
-/***/ },
-/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -82,78 +70,96 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var $ = __webpack_require__(3);
+	var $ = __webpack_require__(2);
+	var helper = __webpack_require__(3);
 	
-	var Transition = (function () {
-	    function Transition() {
-	        _classCallCheck(this, Transition);
+	var Navigation = (function () {
+	    function Navigation() {
+	        _classCallCheck(this, Navigation);
 	
-	        console.log('Transition....');
+	        console.log('Navigation....');
 	
-	        this.$body = $('body');
-	        this.listeners();
+	        this.$wrapper = $('html, body');
+	        this.$nav = $('nav');
+	        this.active = false;
+	        this.resize();
 	    }
 	
-	    _createClass(Transition, [{
-	        key: 'listeners',
-	        value: function listeners() {
+	    _createClass(Navigation, [{
+	        key: 'resize',
+	        value: function resize() {
 	            var _this = this;
 	
-	            this.$body.on('click', 'a', function (e) {
-	                return _this.activate(e);
-	            });
+	            console.log('resize');
+	
+	            helper.$window.on('resize', function () {
+	                return _this.relevance();
+	            }).resize();
+	        }
+	    }, {
+	        key: 'relevance',
+	        value: function relevance() {
+	
+	            if (window.matchMedia('(min-width: ' + helper.media.small + ')').matches && !this.active) this.activate();else if (!window.matchMedia('(min-width: ' + helper.media.small + ')').matches && this.active) this.deactivate();
 	        }
 	    }, {
 	        key: 'activate',
-	        value: function activate(e) {
+	        value: function activate() {
 	            var _this2 = this;
 	
-	            var $link = $(e.currentTarget);
+	            console.log('activate nav');
+	            this.active = true;
+	            this.$nav.on('click.nav', '.nav__link', function (e) {
+	                return _this2.queryLink(e);
+	            });
+	        }
+	    }, {
+	        key: 'deactivate',
+	        value: function deactivate() {
 	
-	            if (!this.queryLink($link)) {
-	
-	                console.log('activate transition');
-	                this.$body.addClass('structure--transition');
-	                console.log(window.location);
-	                setTimeout(function () {
-	                    return _this2.redirect($link);
-	                }, 250);
-	                e.preventDefault();
-	            }
+	            console.log('deactivate nav');
+	            this.active = false;
+	            this.$nav.off('.nav');
 	        }
 	    }, {
 	        key: 'queryLink',
-	        value: function queryLink($link) {
+	        value: function queryLink(e) {
 	
-	            var target = $link.attr('target') === '_blank';
-	            var email = $link.attr('href').indexOf('mailto:') >= 0;
-	            var hash = $link.attr('href').indexOf('#') === 0;
+	            var $link = $(e.currentTarget);
+	            var hash = $link.attr('href');
 	
-	            console.log(target, email, hash);
-	            return target || email || hash;
+	            this.focusSection(hash);
+	            this.scrollToSection(hash);
+	
+	            e.preventDefault();
 	        }
 	    }, {
-	        key: 'redirect',
-	        value: function redirect($link) {
+	        key: 'focusSection',
+	        value: function focusSection(hash) {
 	
-	            console.log('redirecting');
+	            helper.$body.attr('data-hash', hash);
+	            setTimeout(function () {
+	                return helper.$body.removeAttr('data-hash');
+	            }, 2000);
+	        }
+	    }, {
+	        key: 'scrollToSection',
+	        value: function scrollToSection(hash) {
 	
-	            var origin = window.location.origin;
-	            var pathName = $link.attr('href');
+	            var $section = $(hash);
+	            var top = $section.offset().top;
 	
-	            console.log('' + origin + pathName);
-	
-	            window.location.href = '' + origin + pathName;
+	            this.$wrapper.animate({ scrollTop: top }, helper.speed.fast);
 	        }
 	    }]);
 	
-	    return Transition;
+	    return Navigation;
 	})();
 	
-	module.exports = new Transition();
+	module.exports = $('body').data('page') === 'home' ? new Navigation() : null;
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -9990,13 +9996,109 @@
 
 
 /***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var $ = __webpack_require__(2);
+	
+	exports.speed = {
+	    slow: 1000,
+	    medium: 500,
+	    fast: 250
+	};
+	
+	exports.media = {
+	    small: '30em',
+	    medium: '48em',
+	    large: '64em'
+	};
+	
+	exports.$window = $(window);
+	
+	exports.$body = $('body');
+
+/***/ },
 /* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var $ = __webpack_require__(2);
+	var helper = __webpack_require__(3);
+	
+	var Transition = (function () {
+	    function Transition() {
+	        _classCallCheck(this, Transition);
+	
+	        console.log('Transition....');
+	
+	        this.listeners();
+	    }
+	
+	    _createClass(Transition, [{
+	        key: 'listeners',
+	        value: function listeners() {
+	            var _this = this;
+	
+	            helper.$body.on('click', 'a', function (e) {
+	                return _this.activate(e);
+	            });
+	        }
+	    }, {
+	        key: 'activate',
+	        value: function activate(e) {
+	            var _this2 = this;
+	
+	            var $link = $(e.currentTarget);
+	
+	            if (!this.queryLink($link)) {
+	
+	                helper.$body.addClass('structure--transition');
+	                setTimeout(function () {
+	                    return _this2.redirect($link);
+	                }, helper.speed.fast);
+	                e.preventDefault();
+	            }
+	        }
+	    }, {
+	        key: 'queryLink',
+	        value: function queryLink($link) {
+	
+	            var target = $link.attr('target') === '_blank';
+	            var email = $link.attr('href').indexOf('mailto:') >= 0;
+	            var hash = $link.attr('href').indexOf('#') === 0;
+	
+	            return target || email || hash;
+	        }
+	    }, {
+	        key: 'redirect',
+	        value: function redirect($link) {
+	
+	            var origin = window.location.origin;
+	            var pathName = $link.attr('href');
+	
+	            window.location.href = '' + origin + pathName;
+	        }
+	    }]);
+	
+	    return Transition;
+	})();
+	
+	module.exports = new Transition();
+
+/***/ },
+/* 5 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */,
@@ -10005,25 +10107,26 @@
 /* 11 */,
 /* 12 */,
 /* 13 */,
-/* 14 */
+/* 14 */,
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.html";
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "one.html";
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "two.html";
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "three.html";
