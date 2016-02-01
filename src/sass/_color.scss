@@ -1,14 +1,14 @@
-@keyframes structural-color {
-
-	@for $i from 0 through 100 {
-
-		#{$i + '%'} {
-			$hsl: 360 / 100 * $i;
-			background: hsl($hsl, 100, 50);
-			color: hsl($hsl, 100, 30);
-		}
-	}
-}
+// @keyframes structural-color {
+//
+// 	@for $i from 0 through 100 {
+//
+// 		#{$i + '%'} {
+// 			$hsl: 360 / 100 * $i;
+// 			background: hsl($hsl, 100, 50);
+// 			color: hsl($hsl, 100, 30);
+// 		}
+// 	}
+// }
 
 body {
     // animation: {

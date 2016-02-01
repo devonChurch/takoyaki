@@ -8,7 +8,8 @@
     "curate": "cd ./build/home && node curate.js",
     "require": "cd ./build/posts && node require.js",
     "order": "cd ./build/posts && open order.js",
-    "sprite": "cd ./build/sprite && node generate.js"
+    "sprite": "cd ./build/sprite && node generate.js",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",

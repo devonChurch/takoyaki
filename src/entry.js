@@ -1,4 +1,8 @@
+// [ JS
 require('./js/destination');
+require('./js/transition');
+// JS ]
+
 require('./sass/style.scss');
 
 require('file?name=index.html!jade-html!./index');

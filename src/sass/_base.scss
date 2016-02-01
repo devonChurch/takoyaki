@@ -9,6 +9,7 @@ html {
 body {
     font-family: 'roboto-light';
     margin: 0;
+    transition: background speed(fast);
 }
 
 // We are pulling out the <symbol> elements to use throughout the site however
