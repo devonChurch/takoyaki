@@ -50,7 +50,7 @@ body {
     body {
       font-size: 1.3em; } }
 
-.type--smallCap {
+.type--smallCap, #about:before, #contact:before, #work:before {
   font-family: 'roboto-bold';
   font-size: 0.75em;
   text-transform: uppercase; }
@@ -228,18 +228,72 @@ h2 {
     vertical-align: top; }
 
 .structure--column > * {
-  transition: opacity 0.25s; }
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition: 0.25s; }
   body[data-hash] .structure--column > * {
     opacity: 0.2; }
 
 body[data-hash="#about"] .structure--column > #about {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: translateY(3.5em);
+          transform: translateY(3.5em); }
+  body[data-hash="#about"] .structure--column > #about:before {
+    opacity: 1; }
+
+#about {
+  position: relative; }
+  #about:before {
+    bottom: calc(100% + 1em);
+    color: #E91E63;
+    content: "about";
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.25s; }
 
 body[data-hash="#contact"] .structure--column > #contact {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: translateY(3.5em);
+          transform: translateY(3.5em); }
+  body[data-hash="#contact"] .structure--column > #contact:before {
+    opacity: 1; }
+
+#contact {
+  position: relative; }
+  #contact:before {
+    bottom: calc(100% + 1em);
+    color: #E91E63;
+    content: "contact";
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.25s; }
 
 body[data-hash="#work"] .structure--column > #work {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: translateY(3.5em);
+          transform: translateY(3.5em); }
+  body[data-hash="#work"] .structure--column > #work:before {
+    opacity: 1; }
+
+#work {
+  position: relative; }
+  #work:before {
+    bottom: calc(100% + 1em);
+    color: #E91E63;
+    content: "work";
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.25s; }
 
 .contact__list {
   list-style: none;
