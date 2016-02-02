@@ -1,7 +1,7 @@
 -
     post = {
-        heading: 'Post one',
-        type: 'Article',
+        heading: 'Stuff.co.nz Media Hub',
+        type: 'Production',
         date: generateDate({
             year: 2016,
             month: 12,
@@ -12,14 +12,13 @@
 include ../partials/top.jade
     include ../partials/intro.jade
 
-    p
-        Lorem ipsum dolor sit amet.
+    p The brief around Stuff.co.nz Media Hub was to create something both informative and inspirational that would communicate with the countries biggest brands and agencies. I implemented a responsive environment based heavily on flat design, SVG and performant animation.
 
-    p
-        Lorem ipsum dolor sit amet.
+    p Utilising animation throughout the Media Hub was a great way to introduce the required WOW factor. Each icon on site had an animation sequence to play through when scrolled into view, along with elaborate hover and open transitions that all leveraged a set of consistent and performant animation patterns utilising only CSS3 properties that could be GPU accelerated.
 
-    p
-        Lorem ipsum dolor sit amet.
+    p Another novel way to capture the audience attention was the implementation of the dynamic hero unit. Based on Stuff’s five key branding colours I randomly serve up an image based on these colours accompanied by a detailed animation on load and parallax effect on scroll.
+    
+    p The ability to display large amounts of tabular data was paramount to the Media Hub’s success. I built a node script that took tabular data from the companies legacy Microsoft Excel files and converted it into JSON. This data was then AJAX’d into the rate card on request. Displaying this data in a responsive format was necessary as the sales team often utilised this area of the portal offsite.
     
     -
         tech = [
