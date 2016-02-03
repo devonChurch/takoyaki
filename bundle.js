@@ -10088,7 +10088,7 @@
 	    return Navigation;
 	})();
 	
-	module.exports = $('body').data('page') === 'home' ? new Navigation() : null;
+	module.exports = new Navigation();
 
 /***/ },
 /* 5 */

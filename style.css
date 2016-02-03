@@ -50,7 +50,7 @@ body {
     body {
       font-size: 1.3em; } }
 
-.type--smallCap, #about:before, #contact:before, #work:before {
+.type--smallCap, #about:before, #contact:before, #work:before, #more:before, #technology:before {
   font-family: 'roboto-bold';
   font-size: 0.75em;
   text-transform: uppercase; }
@@ -296,6 +296,46 @@ body[data-hash="#work"] .structure--column > #work {
     position: absolute;
     transition: opacity 0.25s; }
 
+body[data-hash="#more"] .structure--column > #more {
+  opacity: 1;
+  -webkit-transform: translateY(3.5em);
+          transform: translateY(3.5em); }
+  body[data-hash="#more"] .structure--column > #more:before {
+    opacity: 1; }
+
+#more {
+  position: relative; }
+  #more:before {
+    bottom: calc(100% + 1em);
+    color: #E91E63;
+    content: "more";
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.25s; }
+
+body[data-hash="#technology"] .structure--column > #technology {
+  opacity: 1;
+  -webkit-transform: translateY(3.5em);
+          transform: translateY(3.5em); }
+  body[data-hash="#technology"] .structure--column > #technology:before {
+    opacity: 1; }
+
+#technology {
+  position: relative; }
+  #technology:before {
+    bottom: calc(100% + 1em);
+    color: #E91E63;
+    content: "technology";
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.25s; }
+
 .contact__list {
   list-style: none;
   margin: 8vh 0;
@@ -394,7 +434,7 @@ body[data-hash="#work"] .structure--column > #work {
       max-width: 20em;
       width: 50%; } }
 
-.functionality {
+.more {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -405,12 +445,12 @@ body[data-hash="#work"] .structure--column > #work {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 8vh; }
-  .functionality__scrollToTop {
+  .more__scrollToTop {
     padding: 0;
     position: relative; }
-    .functionality__scrollToTop:hover .functionality__scrollToTop__icon {
+    .more__scrollToTop:hover .more__scrollToTop__icon {
       fill: white; }
-    .functionality__scrollToTop__icon {
+    .more__scrollToTop__icon {
       fill: #19415a;
       height: 3em;
       transition: fill 0.25s;
