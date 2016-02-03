@@ -1,10 +1,13 @@
-.functionality {
+.more {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: vertical(large);
 
     &__scrollToTop {
+        $size: 2.8em;
+        margin-left: 1em;
+        max-height: calc(#{$size} + 4px);
         padding: 0;
         position: relative;
 
@@ -13,11 +16,21 @@
         }
 
         &__icon {
-            $size: 3em;
             fill: color(blue, dark);
-            height: 3em;
+            height: $size;
             transition: fill speed(fast);
-            width: 3em;
+            width: $size;
+        }
+    }
+
+    &__functionality {
+        margin: -1em 0 0 -1em;
+
+        .button--func {
+            margin: {
+                left: calc(1em + 4px);
+                top: calc(1em + 4px);
+            }
         }
     }
 }

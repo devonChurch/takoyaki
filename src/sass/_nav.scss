@@ -43,7 +43,7 @@
 	}
 }
 
-$hash: 'about', 'contact', 'work';
+$hash: 'about', 'contact', 'work', 'more', 'technology';
 
 @each $item in $hash {
 

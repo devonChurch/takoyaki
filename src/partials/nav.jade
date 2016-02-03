@@ -8,7 +8,10 @@
 nav#nav.nav
     ul.nav__list
         if post
-            li.nav__item: a.nav__link.type--smallCap.button--nav(href='/') Back
+            if more
+                li.nav__item: a.nav__link.type--smallCap.button--nav(href='#more') More
+            if technology
+                li.nav__item: a.nav__link.type--smallCap.button--nav(href='#technology') Technology
         else
             for item in navItems
                 li.nav__item: a.nav__link.type--smallCap.button--nav(href='#{item.link}') #{item.heading}

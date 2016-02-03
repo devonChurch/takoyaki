@@ -1,0 +1,10 @@
+div#more.more
+    button#scrollToTop.more__scrollToTop.button--func.type--smallCap(role='button', aria-label='Scroll to top')
+        svg.more__scrollToTop__icon: use(xlink:href='#scroll')
+    div.more__functionality
+        if post
+            if more
+                for item in more
+                    a.button--func.type--smallCap(href='#{item.link}', role='button') #{item.heading}
+        //- if !post
+        //-     button.more__loadMore.button--func.type--smallCap(role='button') Load more

@@ -9,7 +9,8 @@
     "require": "cd ./build/posts && node require.js",
     "order": "cd ./build/posts && open order.js",
     "sprite": "cd ./build/sprite && node generate.js",
-    "publish": "git subtree push --prefix dist origin gh-pages"
+    "publish": "git subtree push --prefix dist origin gh-pages",
+    "images": "cd ./build/images && node optimise.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.5",
     "glob": "^6.0.4",
+    "imagemin": "^4.0.0",
     "jade": "^1.11.0",
     "jade-html-loader": "0.0.3",
     "jade-loader": "^0.8.0",

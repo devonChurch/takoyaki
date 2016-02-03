@@ -5,9 +5,11 @@
         border: 2px solid color(blue, dark);
         color: color(blue, dark);
         cursor: pointer;
+        display: inline-block;
         outline: 0;
         padding: 0.7em 1.0em;
         position: relative;
+        text-decoration: none;
         transition: color speed(fast);
         z-index: 1;
 

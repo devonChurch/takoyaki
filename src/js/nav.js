@@ -71,4 +71,4 @@ const Navigation = class {
 
 };
 
-module.exports = $('body').data('page') === 'home' ? new Navigation() : null;
+module.exports = new Navigation();
