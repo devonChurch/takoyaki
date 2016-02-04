@@ -6,26 +6,38 @@
             year: 2016,
             month: 12,
             day: 14
-        })
+        }),
+        images: {
+            type: 'xxxx',
+            data: [
+                {src: 'xxxxx', alt: 'xxxxx'},
+                {src: 'xxxxx', alt: 'xxxxx'},
+                {src: 'xxxxx', alt: 'xxxxx'}
+            ]
+        },
+        technology: [
+            'Aaaaaaaaaaaaaa',
+            'Bbbbbbbbbb',
+            'Cccccccccccccc',
+            'Ddddddddddd',
+            'Eeeeeeeeee'
+        ],
+        more: [
+            { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/'},
+            { heading: 'Git Hub', link: 'https://github.com/devonChurch'}
+        ]
     } //- post ]
-    
-    technology = [
-        'Aaaaaaaaaaaaaa',
-        'Bbbbbbbbbb',
-        'Cccccccccccccc',
-        'Ddddddddddd',
-        'Eeeeeeeeee'
-    ] //- technology ]
-    
-    more = [
-        { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/'},
-        { heading: 'Git Hub', link: 'https://github.com/devonChurch'}
-    ] //- more ]
 
 include ../partials/top.jade
     include ../partials/intro.jade
 
     p The brief around Stuff.co.nz Media Hub was to create something both informative and inspirational that would communicate with the countries biggest brands and agencies. I implemented a responsive environment based heavily on flat design, SVG and performant animation.
+    
+    section#images.images.images--3upSquares
+    ul.images__list
+        li.images__item: img(src='img/stuff-media-hub-small.jpg', alt='xxxx')
+        li.images__item: img(src='img/stuff-media-hub-medium.jpg', alt='xxxx')
+        li.images__item: img(src='img/stuff-media-hub-large.jpg', alt='xxxx')
 
     p Utilising animation throughout the Media Hub was a great way to introduce the required WOW factor. Each icon on site had an animation sequence to play through when scrolled into view, along with elaborate hover and open transitions that all leveraged a set of consistent and performant animation patterns utilising only CSS3 properties that could be GPU accelerated.
 

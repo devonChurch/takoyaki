@@ -75,9 +75,11 @@ h2 {
   border: 2px solid #19415a;
   color: #19415a;
   cursor: pointer;
+  display: inline-block;
   outline: 0;
   padding: 0.7em 1.0em;
   position: relative;
+  text-decoration: none;
   transition: color 0.25s;
   z-index: 1; }
   .button--func:before, .button--func:after {
@@ -417,6 +419,28 @@ body[data-hash="#technology"] .structure--column > #technology {
 .post__date {
   color: #cccccc; }
 
+.post__images {
+  background: gray;
+  margin: 8vh 0; }
+  @media (min-width: 64em) {
+    .post__images {
+      left: 50%;
+      max-width: calc(100vw - 5em);
+      position: relative;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 116%; } }
+  .post__images--3upSquares {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .post__images--3upSquares img {
+      height: auto;
+      width: calc(33.33% - 2vh); }
+
 .tech__heading {
   color: #19415a;
   margin: 8vh 0 1vh; }
@@ -446,15 +470,22 @@ body[data-hash="#technology"] .structure--column > #technology {
           justify-content: space-between;
   margin-top: 8vh; }
   .more__scrollToTop {
+    margin-left: 1em;
+    max-height: calc(2.8em + 4px);
     padding: 0;
     position: relative; }
     .more__scrollToTop:hover .more__scrollToTop__icon {
       fill: white; }
     .more__scrollToTop__icon {
       fill: #19415a;
-      height: 3em;
+      height: 2.8em;
       transition: fill 0.25s;
-      width: 3em; }
+      width: 2.8em; }
+  .more__functionality {
+    margin: -1em 0 0 -1em; }
+    .more__functionality .button--func {
+      margin-left: calc(1em + 4px);
+      margin-top: calc(1em + 4px); }
 
 .footer {
   color: #cccccc; }

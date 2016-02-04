@@ -1,6 +1,7 @@
-section#technology
-    h2.tech__heading Technology:
+if post && post.technology
+    section#technology
+        h2.tech__heading Technology:
 
-    ul.tech__list
-        for item in technology
-            li.tech__item.type--smallCap item
+        ul.tech__list
+            for item in post.technology
+                li.tech__item.type--smallCap item
