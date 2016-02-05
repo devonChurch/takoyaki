@@ -10014,44 +10014,20 @@
 	    function Navigation() {
 	        _classCallCheck(this, Navigation);
 	
-	        console.log('Navigation....');
-	
 	        this.$nav = $('nav');
 	        this.active = false;
-	        this.resize();
+	        this.activate();
 	    }
 	
 	    _createClass(Navigation, [{
-	        key: 'resize',
-	        value: function resize() {
-	            var _this = this;
-	
-	            helper.$window.on('resize', function () {
-	                return _this.relevance();
-	            }).resize();
-	        }
-	    }, {
-	        key: 'relevance',
-	        value: function relevance() {
-	
-	            if (window.matchMedia('(min-width: ' + helper.media.small + ')').matches && !this.active) this.activate();else if (!window.matchMedia('(min-width: ' + helper.media.small + ')').matches && this.active) this.deactivate();
-	        }
-	    }, {
 	        key: 'activate',
 	        value: function activate() {
-	            var _this2 = this;
+	            var _this = this;
 	
 	            this.active = true;
-	            this.$nav.on('click.nav', '.nav__link', function (e) {
-	                return _this2.queryLink(e);
+	            this.$nav.on('click', '.nav__link', function (e) {
+	                return _this.queryLink(e);
 	            });
-	        }
-	    }, {
-	        key: 'deactivate',
-	        value: function deactivate() {
-	
-	            this.active = false;
-	            this.$nav.off('.nav');
 	        }
 	    }, {
 	        key: 'queryLink',
