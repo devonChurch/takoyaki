@@ -422,23 +422,31 @@ body[data-hash="#technology"] .structure--column > #technology {
 
 .images {
   margin: 8vh auto; }
-  .images--3upSquares .images__list {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-  .images--3upSquares .images__item {
+  .images--3upEqual .images__item {
     height: auto;
     width: calc(50% - 0.5em); }
     @media (max-width: 29.99em) {
-      .images--3upSquares .images__item:nth-of-type(1n+3) {
+      .images--3upEqual .images__item:nth-of-type(1n+3) {
         margin-top: 1em; } }
     @media (min-width: 30em) {
-      .images--3upSquares .images__item {
+      .images--3upEqual .images__item {
         width: calc(33.33% - 0.66em); } }
+  .images--2upEqual .images__item {
+    height: auto;
+    width: 100%; }
+    @media (max-width: 29.99em) {
+      .images--2upEqual .images__item:nth-of-type(1n+2) {
+        margin-top: 1em; } }
+    @media (min-width: 30em) {
+      .images--2upEqual .images__item {
+        width: calc(50% - 0.5em); } }
   .images__list {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
