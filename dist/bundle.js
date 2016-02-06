@@ -10136,19 +10136,19 @@
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "one.html";
+	module.exports = __webpack_require__.p + "heart-rate-monitor.html";
 
 /***/ },
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "two.html";
+	module.exports = __webpack_require__.p + "real-estate-widget.html";
 
 /***/ },
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "three.html";
+	module.exports = __webpack_require__.p + "stuff-media-hub.html";
 
 /***/ }
 /******/ ]);
