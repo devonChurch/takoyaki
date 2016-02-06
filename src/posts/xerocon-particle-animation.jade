@@ -1,0 +1,37 @@
+extends ../partials/post.jade
+
+block postData
+    -
+        post = {
+            heading: 'Xerocon particle animation',
+            type: 'Experiment',
+            date: generateDate({
+                year: 2015,
+                month: 12,
+                day: 11
+            }),
+            images: {
+                type: '3upEqual',
+                data: [
+                    {src: 'stuff-media-hub-small', extension: 'jpg', alt: 'xxxxx'},
+                    {src: 'stuff-media-hub-medium', extension: 'jpg', alt: 'yyyyy'},
+                    {src: 'stuff-media-hub-large', extension: 'jpg', alt: 'zzzzz'}
+                ]
+            },
+            technology: [
+                'Webpack',
+                'ES6 (Transpired using Babel)',
+                'Canvas',
+                'SASS'
+            ],
+            more: [
+                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/zrBBZa/'},
+                { heading: 'Git Hub', link: 'https://github.com/devonChurch/blueberry-danish'}
+            ]
+        } //- post ]
+
+block content
+    :markdown
+        This canvas experiment was conceived during a meeting at my current employment, Xero. A new aesthetic was pitched for their flagship global conference which used particles to illustrate the events logo (a pin icon). I came to find that someone was manually placing all of the particles instances within each icon design. This was a job for procedural generation and with a little more effort we could play with the particle parameters to create some interesting animation.
+        
+        Canvas was the obvious choice to produce an execution that would rely heavily on performance due to the manipulation of so many particles. I found that I rewrote the particle trajectory script several times because of rendering performance where dynamically calculating each degree of offset on a per pixel basis was rather intense for 1000 particle instances. instead I occulted allot of the math on load and referenced the stored data with a series of randomisation calculation. This gave the same effect as my original implementation but with much less overhead.

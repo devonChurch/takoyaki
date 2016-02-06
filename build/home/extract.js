@@ -70,7 +70,7 @@ function constructSnippets(snippets) {
 
 function injectSnippets(snippets) {
 
-    fs.writeFileSync(`${dir}partials/curate.jade`, snippets);
+    fs.writeFileSync(`${dir}partials/curated.jade`, snippets);
 
 }
 

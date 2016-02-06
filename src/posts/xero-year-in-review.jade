@@ -1,0 +1,40 @@
+extends ../partials/post.jade
+
+block postData
+    -
+        post = {
+            heading: 'Xero year in review',
+            type: 'Production',
+            date: generateDate({
+                year: 2015,
+                month: 5,
+                day: 20
+            }),
+            images: {
+                type: '3upEqual',
+                data: [
+                    {src: 'stuff-media-hub-small', extension: 'jpg', alt: 'xxxxx'},
+                    {src: 'stuff-media-hub-medium', extension: 'jpg', alt: 'yyyyy'},
+                    {src: 'stuff-media-hub-large', extension: 'jpg', alt: 'zzzzz'}
+                ]
+            },
+            technology: [
+                'Javascript',
+                'SASS',
+                'Responsive Design',
+                'Vimeo'
+            ],
+            more: [
+                { heading: 'Preview', link: 'https://www.xero.com/year-in-review/'}
+            ]
+        } //- post ]
+
+block content
+    :markdown
+        The Xero Year in Review project was a bespoke execution generated outside of the constraints of Xero’s main CMS framework. This freedom allowed me to work closely with our design team to create something with a high level of fidelity.
+
+        The custom side navigation unit was an interesting request from the designers. Each “dot“ represented a selectable section on the page - with the current section in view being differentiated visually. The fun part was as the individual navigation dots passed through the various page sections their colour would change on the fly to distinguish themselves apart from the underlying background colour.
+
+        There was allot of animation triggered on scroll events. I pushed as much as possible to the GPU via CSS transitions so ensure a smooth FPS rate. For more complex scenarios like the animated incrementing numbers I created custom Javascript functionality that easily hooked into the main scroll event also controlling the navigation and CSS animations.
+
+        Responsive design was a main priority so we created a custom grid to accommodate the unique layout in all device formats. I went the extra mile with responsive table layouts so that the important financial data was still easily accessible on small devices.

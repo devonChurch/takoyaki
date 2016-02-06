@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "npm run posts:render && webpack",
     "posts:curate": "cd ./build/home && node curate.js",
     "posts:order": "cd ./build/posts && open order.js",
     "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/posts --out ./dist",
@@ -12,9 +13,7 @@
     "publish": "git subtree push --prefix dist origin gh-pages",
     "images": "cd ./build/images && node optimise.js",
     "server": "cd ./dist && live-server",
-    "watch": "npm run watch:jade && npm run watch:libs",
-    "watch:jade": "watch-spawn -p './src/**/!(curate.jade)' -d 5000 npm run posts:render",
-    "watch:libs": "watch-spawn -p './src/**/*.(js|scss)' webkit"
+    "watch": "watch-spawn -p './src/**/!(curate.jade)' npm run build"
   },
   "repository": {
     "type": "git",
