@@ -55,13 +55,6 @@
 	// JS ]
 	
 	__webpack_require__(6);
-	
-	__webpack_require__(16);
-	
-	/* [ Posts */
-	__webpack_require__(17);
-	__webpack_require__(18);
-	__webpack_require__(19); /* Posts ] */
 
 /***/ },
 /* 1 */
@@ -10116,39 +10109,6 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "index.html";
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "heart-rate-monitor.html";
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "real-estate-widget.html";
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "stuff-media-hub.html";
 
 /***/ }
 /******/ ]);
