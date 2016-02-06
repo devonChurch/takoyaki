@@ -1,7 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const override = require('../helper/override');
 const dir = '../../src/entry.js';
 
 function init(posts) {
@@ -29,7 +28,16 @@ function getEntry() {
 
 function updateEntryJs(js, data) {
 
-    return override(js, '/* [ Posts */', '/* Posts ] */', data);
+    const open = '/* [ Posts */';
+    const close = '/* Posts ] */';
+
+    const start = data.indexOf(open) + open.length;
+    const end = data.indexOf(close);
+
+    const top = data.substr(0, start);
+    const bottom = data.substr(end);
+
+    return `${top}${js}${bottom}`;
 
 }
 

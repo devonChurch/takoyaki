@@ -1,0 +1,39 @@
+extends ../partials/post.jade
+
+block postData
+    -
+        post = {
+            heading: 'Heart rate monitor !!!!',
+            type: 'Experiment',
+            date: generateDate({
+                year: 2016,
+                month: 1,
+                day: 13
+            }),
+            images: {
+                type: '3upSquares',
+                data: [
+                    {src: 'stuff-media-hub-small', extension: 'jpg', alt: 'xxxxx'},
+                    {src: 'stuff-media-hub-medium', extension: 'jpg', alt: 'yyyyy'},
+                    {src: 'stuff-media-hub-large', extension: 'jpg', alt: 'zzzzz'}
+                ]
+            },
+            technology: [
+                'Webpack',
+                'ES6 (Transpired using Babel)',
+                'Canvas',
+                'HSL'
+            ],
+            more: [
+                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/bERMeZ/'},
+                { heading: 'Git Hub', link: 'https://github.com/devonChurch/pork-dumpling'}
+            ]
+        } //- post ]
+
+block content
+    :markdown
+        This experiment was another investigation into performant canvas animation. The execution was comprised of various aesthetic elements all hooking into a single requestAnimationFrame call. In that regard I adopted an ES6 class based setup to modularise component in a concise manner.
+
+        Colour transition were achieved using the HSL syntax. This made looping through the hue and controlling the variations of each element was easy using the Luminosity parameter a trivial task.
+
+        I created a mock heart beat in order to get a BPM value registered on screen. The graph animation also hooks into this mock heart beat to get a unique frequency and severity for each “beat”. The easing animation on the beat is generated using a depreciating sine curve function.

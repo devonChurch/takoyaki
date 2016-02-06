@@ -1,0 +1,5 @@
+if post.images
+    section#images(class='images images--#{post.images.type}')
+        ul.images__list
+            for item in post.images.data
+                li.images__item: img.images__image(src='img/#{item.src}.#{item.extension}', srcset='img/#{item.src}-retina.#{item.extension} 2x', alt='#{item.alt}')

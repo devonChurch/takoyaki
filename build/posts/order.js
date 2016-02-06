@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = [
-    'one',
-    'two',
-    'three'
+    'heart-rate-monitor',
+    'real-estate-widget',
+    'stuff-media-hub'
 ];

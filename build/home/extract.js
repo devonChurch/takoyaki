@@ -8,7 +8,6 @@ function init(posts) {
 
     let snippets = compileSnippets(posts);
     snippets = constructSnippets(snippets);
-    console.log(snippets);
     injectSnippets(snippets);
 
 }
@@ -71,7 +70,7 @@ function constructSnippets(snippets) {
 
 function injectSnippets(snippets) {
 
-    fs.writeFileSync(`${dir}partials/snippets.jade`, snippets);
+    fs.writeFileSync(`${dir}partials/curate.jade`, snippets);
 
 }
 

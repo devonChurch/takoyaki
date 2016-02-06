@@ -5,39 +5,16 @@ const Navigation = class {
 
     constructor() {
 
-        console.log('Navigation....');
-
         this.$nav = $('nav');
         this.active = false;
-        this.resize();
-
-    }
-
-    resize() {
-
-        helper.$window.on('resize', () => this.relevance()).resize();
-
-    }
-
-    relevance() {
-
-        if (window.matchMedia(`(min-width: ${helper.media.small})`).matches && !this.active) this.activate();
-        else if (!window.matchMedia(`(min-width: ${helper.media.small})`).matches && this.active) this.deactivate();
-
+        this.activate();
 
     }
 
     activate() {
 
         this.active = true;
-        this.$nav.on('click.nav', '.nav__link', (e) => this.queryLink(e));
-
-    }
-
-    deactivate() {
-
-        this.active = false;
-        this.$nav.off('.nav');
+        this.$nav.on('click', '.nav__link', (e) => this.queryLink(e));
 
     }
 

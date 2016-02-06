@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "curate": "cd ./build/home && node curate.js",
-    "require": "cd ./build/posts && node require.js",
-    "order": "cd ./build/posts && open order.js",
+    "posts:curate": "cd ./build/home && node curate.js",
+    "posts:order": "cd ./build/posts && open order.js",
+    "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/posts --out ./dist",
     "sprite": "cd ./build/sprite && node generate.js",
     "publish": "git subtree push --prefix dist origin gh-pages",
-    "images": "cd ./build/images && node optimise.js"
+    "images": "cd ./build/images && node optimise.js",
+    "server": "cd ./dist && live-server",
+    "watch": "npm run watch:jade && npm run watch:libs",
+    "watch:jade": "watch-spawn -p './src/**/!(curate.jade)' -d 5000 npm run posts:render",
+    "watch:libs": "watch-spawn -p './src/**/*.(js|scss)' webkit"
   },
   "repository": {
     "type": "git",
@@ -42,13 +46,14 @@
     "glob": "^6.0.4",
     "imagemin": "^4.0.0",
     "jade": "^1.11.0",
-    "jade-html-loader": "0.0.3",
-    "jade-loader": "^0.8.0",
+    "jstransformer-markdown": "^1.1.0",
+    "live-server": "^0.9.1",
     "node-sass": "^3.4.1",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "svg-sprite": "^1.2.19",
     "url-loader": "^0.5.7",
+    "watch-spawn": "^1.0.6",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },

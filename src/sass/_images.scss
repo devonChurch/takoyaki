@@ -1,73 +1,52 @@
-.post {
+.images {
+    margin: vertical(large) auto;
 
-    &__heading {
+    &--3upSquares {
 
-    }
+        .images__list {
+            flex-wrap: wrap;
+        }
 
-    &__details {
-        display: flex;
-        justify-content: space-between;
+        .images__item  {
+            height: auto;
+            width: calc(50% - #{0.5em});
 
-        + .structure--divider {
-            margin-top: vertical(tiny);
+            @include media('<small') {
+
+                &:nth-of-type(1n+3) {
+                    margin-top: 1em;
+                }
+            }
+
+            @include media('>=small') {
+                width: calc(33.33% - #{0.66em});
+            }
         }
     }
 
-    &__hashtag {
-        color: color(blue, dark);
-    }
-
-    &__date {
-        color: color(gray, light);
-    }
-
-    &__images {
-        background: gray;
-        // display: flex;
-        margin: vertical(large) 0;
-        // max-width: 1200px;
-        // width: 100vw;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 0;
 
         @include media('>=large') {
             left: 50%;
-            // margin: {
-            //     left: -#{vertical(small)};
-            //     right: -#{vertical(small)};
-            // }
-            // // -5em = 2em (color border) + 2em (content padding) + 1em (scroll bar)
             max-width: calc(100vw - 5em);
             position: relative;
             transform: translateX(-50%);
             width: 116%;
         }
+    }
 
-        &--3upSquares {
+    &__item {
+        position: relative;
+    }
 
-            display: flex;
-            justify-content: space-between;
-
-            img {
-                height: auto;
-                // padding: 0 vertical(small) / 2;
-                width: calc(33.33% - #{vertical(small)});
-
-                // &:nth-of-type(2n+1) {
-                //     padding-left: vertical(small);
-                // }
-
-                // &:first-of-type {
-                //     width: 33.33%;
-                // }
-                //
-                // &:nth-of-type(2) {
-                //     width: 66.66%;
-                // }
-                //
-                // &:last-of-type {
-                //     width: 100%;
-                // }
-            }
-
-        }
+    &__image {
+        display: block;
+        height: auto;
+        width: 100%;
     }
 }

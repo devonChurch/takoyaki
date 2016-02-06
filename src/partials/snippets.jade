@@ -1,38 +1,8 @@
-
--
-    snippets = [
-        
-    {
-        href: 'one',
-        heading: 'Post one',
-        type: 'Article',
-        date: generateDate({
-            year: 2016,
-            month: 12,
-            day: 14
-        })
-    },
-
-    {
-        href: 'two',
-        heading: 'Post two',
-        type: 'Article',
-        date: generateDate({
-            year: 2016,
-            month: 12,
-            day: 14
-        })
-    },
-
-    {
-        href: 'three',
-        heading: 'Post three',
-        type: 'Article',
-        date: generateDate({
-            year: 2016,
-            month: 12,
-            day: 14
-        })
-    },
-
-    ];
+section#work.snippets
+    
+    for item in snippets
+        hr.structure--divider
+        article.snippet
+            a.snippet__link(href='/#{item.href}.html'): h2.snippet__heading #{item.heading}
+            span.snippet__hashtag.type--smallCap #{item.type}
+            time.snippet__date.type--smallCap(datetime='#{item.date.numFormat}') #{item.date.stringFormat}
