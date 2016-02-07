@@ -10,12 +10,13 @@
         padding: 0.7em 1.0em;
         position: relative;
         text-decoration: none;
-        transition: color speed(fast);
+        transition: speed(fast);
+        transition-property: border, color;
         z-index: 1;
 
         &:before,
         &:after {
-            background: color(blue, dark);
+            background: color(pink);
             content: '';
             display: block;
             height: 50%;
@@ -38,6 +39,7 @@
         }
 
         &:hover {
+            border-color: color(pink);
             color: white;
 
             &:before,
@@ -92,7 +94,7 @@
 
         &:hover {
             $offset: 0.35em;
-            color: color(gray, dark);
+            color: color(pink);
             transform: translateY(-$offset);
 
             // Keep the hit box in a static position even though the element is

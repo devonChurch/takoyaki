@@ -23,18 +23,16 @@ html {
   box-sizing: inherit; }
 
 body {
+  color: #3ea8f4;
   font-family: 'roboto-light';
   margin: 0;
   transition: background 0.25s; }
-
-.iconSprite {
-  display: none; }
-
-body {
-  color: #3ea8f4; }
   @media (min-width: 30em) {
     body {
       background: #3ea8f4; } }
+
+.iconSprite {
+  display: none; }
 
 body {
   font-size: 1em;
@@ -87,10 +85,11 @@ h2 {
   padding: 0.7em 1.0em;
   position: relative;
   text-decoration: none;
-  transition: color 0.25s;
+  transition: 0.25s;
+  transition-property: border, color;
   z-index: 1; }
   .button--func:before, .button--func:after {
-    background: #19415a;
+    background: #E91E63;
     content: '';
     display: block;
     height: 50%;
@@ -112,6 +111,7 @@ h2 {
     -webkit-transform-origin: center top;
             transform-origin: center top; }
   .button--func:hover {
+    border-color: #E91E63;
     color: white; }
     .button--func:hover:before, .button--func:hover:after {
       -webkit-transform: scaleY(1);
@@ -151,7 +151,7 @@ h2 {
     transition-property: opacity, transform, -webkit-transform;
     width: 100%; }
   .button--nav:hover {
-    color: #4c4c4c;
+    color: #E91E63;
     -webkit-transform: translateY(-0.35em);
             transform: translateY(-0.35em); }
     .button--nav:hover:before {
@@ -362,9 +362,9 @@ body[data-hash="#technology"] .structure--column > #technology {
   color: #3ea8f4;
   text-decoration: none; }
   .contact__link:hover .contact__icon, .contact__link:focus .contact__icon {
-    background: #19415a; }
+    background: #E91E63; }
   .contact__link:hover .contact__heading, .contact__link:focus .contact__heading {
-    color: #19415a; }
+    color: #E91E63; }
 
 .contact__icon, .contact__heading {
   display: inline;
