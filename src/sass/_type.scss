@@ -30,6 +30,18 @@ body {
 p {
     color: color(gray, dark);
     font-size: 0.8em;
+
+    a {
+        color: color(blue);
+        font-family: 'roboto-bold';
+        text-decoration: none;
+        transition: color speed(fast);
+
+        &:hover,
+        &:focus {
+            color: color(pink);
+        }
+    }
 }
 
 
