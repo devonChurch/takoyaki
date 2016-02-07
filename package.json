@@ -13,7 +13,9 @@
     "publish": "git subtree push --prefix dist origin gh-pages",
     "images": "cd ./build/images && node optimise.js",
     "server": "cd ./dist && live-server",
-    "watch": "watch-spawn -p './src/**/!(curated.jade)' -d 3000 npm run build"
+    "watch": "npm run watch:jade & npm run watch:libs",
+    "watch:jade": "watch-spawn -p 'src/**/!(curated.jade)*.jade' npm run posts:render",
+    "watch:libs": "watch-spawn -p 'src/**/*(*.js|*.scss)' webpack"
   },
   "repository": {
     "type": "git",
