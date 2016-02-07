@@ -4,18 +4,22 @@
   "description": "A simple personal portal for the domain devonchu.ch",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "npm run posts:render && webpack",
+    "start": "npm run watch",
+    "build": "npm run posts:render && webpack && npm run copy",
     "posts:curate": "cd ./build/home && node curate.js",
     "posts:order": "cd ./build/posts && open order.js",
     "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/posts --out ./dist",
-    "sprite": "cd ./build/sprite && node generate.js",
+    "media:sprite": "cd ./build/sprite && node generate.js",
+    "media:images": "cd ./build/images && node optimise.js",
+    "media:render": "npm run media:sprite && npm run media:images",
+    "copy": "npm run copy:static",
+    "copy:static": "cp ./src/CNAME ./dist",
     "publish": "git subtree push --prefix dist origin gh-pages",
-    "images": "cd ./build/images && node optimise.js",
     "server": "cd ./dist && live-server",
-    "watch": "npm run watch:jade & npm run watch:libs",
+    "watch": "npm run watch:jade & npm run watch:libs & npm run watch:media",
     "watch:jade": "watch-spawn -p 'src/**/!(curated.jade)*.jade' npm run posts:render",
-    "watch:libs": "watch-spawn -p 'src/**/*(*.js|*.scss)' webpack"
+    "watch:libs": "watch-spawn -p 'src/**/*(*.js|*.scss)' webpack",
+    "watch:media": "watch-spawn -p 'src/**/*(*.svg|*.jpg|*.png|*.gif)' npm run media:render"
   },
   "repository": {
     "type": "git",
