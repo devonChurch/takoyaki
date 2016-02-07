@@ -58,6 +58,13 @@ body {
 p {
   color: #4c4c4c;
   font-size: 0.8em; }
+  p a {
+    color: #3ea8f4;
+    font-family: 'roboto-bold';
+    text-decoration: none;
+    transition: color 0.25s; }
+    p a:hover, p a:focus {
+      color: #E91E63; }
 
 h1 {
   color: #3ea8f4;
