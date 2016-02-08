@@ -10,7 +10,7 @@
     "posts:order": "cd ./build/posts && open order.js",
     "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/posts --out ./dist",
     "media:sprite": "cd ./build/sprite && node generate.js",
-    "media:images": "cd ./build/images && node optimise.js",
+    "media:images": "cp -R ./src/img ./dist/ && imageoptim --directory ./dist/img",
     "media:render": "npm run media:sprite && npm run media:images",
     "copy": "npm run copy:static",
     "copy:static": "cp ./src/CNAME ./dist",
@@ -18,8 +18,8 @@
     "server": "cd ./dist && live-server",
     "watch": "npm run watch:jade & npm run watch:libs & npm run watch:media",
     "watch:jade": "watch-spawn -p 'src/**/!(curated.jade)*.jade' npm run posts:render",
-    "watch:libs": "watch-spawn -p 'src/**/*(*.js|*.scss)' webpack",
-    "watch:media": "watch-spawn -p 'src/**/*(*.svg|*.jpg|*.png|*.gif)' npm run media:render"
+    "watch:libs": "watch-spawn -p 'src/**/*.{js,scss}' webpack",
+    "watch:media": "watch-spawn -p 'src/**/*.{svg,jpg,png,gif}' npm run media:render"
   },
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.5",
     "glob": "^6.0.4",
-    "imagemin": "^4.0.0",
+    "imageoptim-cli": "^1.11.6",
     "jade": "^1.11.0",
     "jstransformer-markdown": "^1.1.0",
     "live-server": "^0.9.1",
