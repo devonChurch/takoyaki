@@ -1,0 +1,35 @@
+extends ../partials/post.jade
+
+block postData
+    -
+        post = {
+            heading: 'Silver Fern Farms Premier Selection Awards',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 9,
+                day: 23
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'silver-fern-farms-laptop', extension: 'jpg', alt: 'xxxxxxxx'},
+                    {src: 'silver-fern-farms-desktop', extension: 'jpg', alt: 'xxxxxxxx'}
+                ]
+            },
+            technology: [
+                'Javascript',
+                'JSON / AJAX',
+                'Greensock',
+                'Handlebars',
+                'SASS'
+            ]
+        } //- post ]
+
+block content
+    :markdown
+        The Silver Fern Farms Premier Selection Awards campaign was an execution that spanned multiple months. Each portion of the selection process extended the design and functionality of the awards page. The live rendition was located within stuff.co.nz’s Food and Wine section in addition to being promoted site wide via a series of animated digital adverts.
+
+        The design was based around the Silver Fern Farms promotion aesthetic and I liaised closely with agency DDB to ensure all assets were consistent. Participant information was AJAX’ed in from Silver Fern Farms which make alterations to the copy trivial.
+
+        Animation was used to create intrigue around the entrants and their dishes. I built an intro animation that reflected the promotions tag line and added various subtle transitions around the entrant thumbnails and their relationship with the information modal.

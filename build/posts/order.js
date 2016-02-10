@@ -7,5 +7,6 @@ module.exports = [
     'xero-year-in-review',
     'xerocon-event-portal',
     'real-estate-widget',
-    'stuff-media-hub'
+    'stuff-media-hub',
+    'silver-fern-farms'
 ];
