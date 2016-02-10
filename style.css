@@ -438,6 +438,8 @@ body[data-hash="#technology"] .structure--column > #technology {
     @media (min-width: 30em) {
       .images--3upEqual .images__item {
         width: calc(33.33% - 0.66em); } }
+  .images--3upEqual .images__placeholder {
+    padding-top: 100%; }
   .images--2upEqual .images__item {
     height: auto;
     width: 100%; }
@@ -447,6 +449,8 @@ body[data-hash="#technology"] .structure--column > #technology {
     @media (min-width: 30em) {
       .images--2upEqual .images__item {
         width: calc(50% - 0.5em); } }
+  .images--2upEqual .images__placeholder {
+    padding-top: 65.51724%; }
   .images__list {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -473,7 +477,23 @@ body[data-hash="#technology"] .structure--column > #technology {
   .images__image {
     display: block;
     height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 100%; }
+  .images__placeholder {
+    height: 0;
+    position: relative;
+    width: 100%; }
+  .images__icon {
+    fill: #cccccc;
+    height: auto;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 50%;
+    width: 3.75rem; }
 
 .tech__heading {
   color: #19415a;
