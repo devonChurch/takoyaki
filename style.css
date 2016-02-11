@@ -69,7 +69,7 @@ h1 {
   font-family: 'signika-bold';
   font-size: 1.7em;
   margin: 8vh 0 4vh;
-  max-width: 20em; }
+  max-width: 19em; }
 
 h2 {
   font-family: 'signika-bold';
@@ -205,9 +205,9 @@ h2 {
         max-width: calc(100vw - 5em);
         width: 116%; } }
 
-.structure--transition {
+html:not(.no-js) .structure--transition {
   background: white; }
-  .structure--transition .structure--column {
+  html:not(.no-js) .structure--transition .structure--column {
     opacity: 0;
     -webkit-transform: scale(0.9);
             transform: scale(0.9); }
