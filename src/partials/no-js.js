@@ -1,7 +1,5 @@
 (function() {
 
-    setTimeout(function() {
-        document.documentElement.classList.remove('no-js');
-    }, 0);
+    document.documentElement.classList.remove('no-js');
 
 })();
