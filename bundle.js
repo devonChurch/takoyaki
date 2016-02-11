@@ -44,15 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// https://devonchurch.github.io/takoyaki/
-	
-	// [ JS
 	'use strict';
 	
 	__webpack_require__(1);
 	__webpack_require__(4);
 	__webpack_require__(5);
-	// JS ]
 	
 	__webpack_require__(6);
 
@@ -72,8 +68,6 @@
 	var Transition = (function () {
 	    function Transition() {
 	        _classCallCheck(this, Transition);
-	
-	        console.log('Transition....');
 	
 	        this.listeners();
 	    }
@@ -10049,8 +10043,9 @@
 	
 	            var $section = $(hash);
 	            var top = $section.offset().top;
+	            var offset = 50;
 	
-	            helper.$page.animate({ scrollTop: top }, helper.speed.fast);
+	            helper.$page.animate({ scrollTop: top - offset }, helper.speed.fast);
 	        }
 	    }]);
 	
@@ -10074,8 +10069,6 @@
 	var Scroll = (function () {
 	    function Scroll() {
 	        _classCallCheck(this, Scroll);
-	
-	        console.log('Scroll....');
 	
 	        this.listeners();
 	    }
