@@ -41,8 +41,9 @@ const Navigation = class {
 
         const $section = $(hash);
         const top = $section.offset().top;
+        const offset = 50;
 
-        helper.$page.animate({scrollTop: top}, helper.speed.fast);
+        helper.$page.animate({scrollTop: top - offset}, helper.speed.fast);
 
     }
 

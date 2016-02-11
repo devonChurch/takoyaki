@@ -4,8 +4,6 @@ const Scroll = class {
 
     constructor() {
 
-        console.log('Scroll....');
-
         this.listeners();
 
     }

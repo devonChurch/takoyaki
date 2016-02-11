@@ -5,8 +5,6 @@ const Transition = class {
 
     constructor() {
 
-        console.log('Transition....');
-
         this.listeners();
 
     }
