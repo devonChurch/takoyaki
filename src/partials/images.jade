@@ -4,4 +4,4 @@ if post.images
             for item in post.images.data
                 li.images__item
                     div.images__placeholder: svg.images__icon: use(xlink:href='#image')
-                    img.images__image(src='img/#{item.src}.#{item.extension}', srcset='img/#{item.src}-retina.#{item.extension} 2x', alt='#{item.alt}')
+                    img.images__image(src='/img/#{item.src}.#{item.extension}', srcset='img/#{item.src}-retina.#{item.extension} 2x', alt='#{item.alt}')
