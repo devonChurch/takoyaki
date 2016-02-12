@@ -88,7 +88,7 @@
 	
 	            var $link = $(e.currentTarget);
 	
-	            if (!this.queryLink($link)) {
+	            if (this.queryLink($link)) {
 	
 	                helper.$body.addClass('structure--transition');
 	                setTimeout(function () {
@@ -101,11 +101,7 @@
 	        key: 'queryLink',
 	        value: function queryLink($link) {
 	
-	            var target = $link.attr('target') === '_blank';
-	            var email = $link.attr('href').indexOf('mailto:') >= 0;
-	            var hash = $link.attr('href').indexOf('#') === 0;
-	
-	            return target || email || hash;
+	            return $link.hasClass('button--local');
 	        }
 	    }, {
 	        key: 'redirect',

@@ -19,7 +19,7 @@ const Transition = class {
 
         const $link = $(e.currentTarget);
 
-        if (!this.queryLink($link)) {
+        if (this.queryLink($link)) {
 
             helper.$body.addClass('structure--transition');
             setTimeout(() => this.redirect($link), helper.speed.fast);
@@ -31,11 +31,7 @@ const Transition = class {
 
     queryLink($link) {
 
-        const target = $link.attr('target') === '_blank';
-        const email = $link.attr('href').indexOf('mailto:') >= 0;
-        const hash = $link.attr('href').indexOf('#') === 0;
-
-        return target || email || hash;
+        return $link.hasClass('button--local');
 
     }
 
