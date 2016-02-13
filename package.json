@@ -13,7 +13,7 @@
     "media:images": "cp -R ./src/img ./dist/ && imageoptim --directory ./dist/img",
     "media:render": "npm run media:sprite && npm run media:images",
     "copy": "npm run copy:static",
-    "copy:static": "cp ./src/CNAME ./dist",
+    "copy:static": "cp ./src/CNAME ./dist && cp ./src/favicon.png ./dist && cp ./src/apple-touch-icon.png ./dist",
     "publish": "git subtree push --prefix dist origin gh-pages",
     "server": "cd ./dist && live-server",
     "watch": "npm run watch:jade & npm run watch:libs & npm run watch:media",
