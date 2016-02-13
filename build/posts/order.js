@@ -8,6 +8,8 @@ module.exports = [
     'xerocon-event-portal',
     'real-estate-widget',
     'jaguar-expandable-advert',
+    'the-warehouse-fashion-wheel',
     'stuff-media-hub',
-    'silver-fern-farms'
+    'silver-fern-farms',
+    'stuff-dynamic-billboards'
 ];

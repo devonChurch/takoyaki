@@ -61,8 +61,7 @@ function extractData(data) {
 
 function constructSnippets(snippets) {
 
-    return `
--
+    return `-
     snippets = [
         ${snippets}
     ];

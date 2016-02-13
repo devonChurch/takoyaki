@@ -96,8 +96,8 @@ block pageData
             type: 'Production',
             date: generateDate({
                 year: 2016,
-                month: 01,
-                day: 01
+                month: 1,
+                day: 1
             }),
             images: {
                 type: '2upEqual',

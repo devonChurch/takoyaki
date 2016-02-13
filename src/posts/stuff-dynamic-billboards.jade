@@ -1,0 +1,35 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'Stuff.co.nz dynamic digital billboards',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 7,
+                day: 14
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'stuff-dynamic-billboards-national', extension: 'jpg', alt: 'Digital billboard located in Auckland on Queen street currently displaying a National new story'},
+                    {src: 'stuff-dynamic-billboards-travel', extension: 'jpg', alt: 'Digital billboard located in Auckland on The Strand currently displaying a Travel new story'}
+                ]
+            },
+            technology: [
+                'Flash',
+                'Greensock',
+                'JSONP / AJAX',
+                'CRON job'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        [Stuff.co.nz](http://www.stuff.co.nz/) was an early adopter of the digital billboard advertising trend. We chose to not only embrace the medium but to push it further than other brands at the time.
+
+        Five digital billboard executions around Auckland were constantly updated with breaking new stories taken straight from the stuff.co.nz CMS. Depending on the story type the design would augment its aesthetic to match the vertical currently portrayed. I liaised closely with the [APN Outdoor](http://www.apnoutdoor.co.nz/) team to ensure the campaign rollout ran smoothly.
+
+        I leveraged the same CMS feed that our iOS application uses in order to populate the billboards. To get around the cross domain issues that housing the execution on APN’s server produced I created a CRON job that took the iOS feed, converted it into JSONP and stored it on the stuff servers for fetching.
