@@ -1,8 +1,11 @@
 include ./top.jade
-    include ./intro.jade
-    include ./images.jade
-    
-    block content
+    include ./structure.jade
+        include ./intro.jade
+        include ./images.jade
+        
+        block content
 
-    include ./technology.jade
+        include ./technology.jade
+        include ./more.jade
+        include ./footer.jade
     include ./bottom.jade
