@@ -1,0 +1,53 @@
+$media: (
+    small: 30em,
+    medium: 48em,
+    large: 64em
+);
+
+@function media($size) {
+    @return map-get($media, $size);
+}
+
+$vertical: (
+    tiny: 1vh,
+    small: 2vh,
+    medium: 4vh,
+    large: 8vh
+);
+
+@function vertical($size) {
+    @return map-get($vertical, $size);
+}
+
+$speed: (
+    slow: 1s,
+    medium: 0.5s,
+    fast: 0.25s
+);
+
+@function speed($type) {
+    @return map-get($speed, $type);
+}
+
+$color: (
+    blue: (
+        light: #c5e5fc,
+        medium: #3ea8f4,
+        dark: #19415a
+    ),
+    gray: (
+        light: #cccccc,
+        medium: #989898,
+        dark: #4c4c4c
+    ),
+    pink: (
+        light: #FFBAD9,
+        medium: #E91E63,
+        dark: #79143D
+    )
+);
+
+@function color($type, $tint: medium) {
+    $type: map-get($color, $type);
+    @return map-get($type, $tint);
+}

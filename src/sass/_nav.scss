@@ -1,0 +1,77 @@
+.nav {
+	color: color(gray, light);
+	padding-top: 1.4em;
+
+
+	@include media('>=small') {
+		padding-top: 0;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		top: vertical(large);
+		width: calc(100% - 6em);
+	}
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		display: inline-block;
+
+		&:nth-of-type(1n+2) {
+			padding-left: 2em;
+		}
+	}
+
+	&__link {
+		// Brings the right hand links vertically inline with the left hand
+		// header text.
+		vertical-align: top;
+	}
+}
+
+// Used in conjunction with the nav.js setup where clicking on a hash link bring
+// the relevant content into view. Below we list our hash links and their active
+// state in addition to diving the irrelevant content a dormant opacity value.
+.structure--column > * {
+	transition-property: opacity, transform;
+	transition: speed(fast);
+
+	body[data-hash] & {
+		opacity: 0.2;
+	}
+}
+
+$hash: 'about', 'contact', 'work', 'more', 'technology';
+
+@each $item in $hash {
+
+	body[data-hash="##{$item}"] .structure--column > ##{$item} {
+		opacity: 1;
+		transform: translateY(3.5em);
+
+		&:before {
+			opacity: 1;
+		}
+	}
+
+	##{$item} {
+		position: relative;
+
+		&:before {
+			@extend .type--smallCap;
+			bottom: calc(100% + 1em);
+			color: color(pink);
+			content: '#{$item}';
+			display: block;
+			left: 0;
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			transition: opacity speed(fast);
+		}
+	}
+}

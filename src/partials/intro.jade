@@ -1,0 +1,7 @@
+h1.post__heading #{page.heading}
+
+div.post__details
+    span.post__hashtag.type--smallCap #{page.type}
+    time.post__date.type--smallCap(datetime='#{page.date.numFormat}') #{page.date.stringFormat}
+
+hr.structure--divider

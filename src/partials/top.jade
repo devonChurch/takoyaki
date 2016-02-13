@@ -1,0 +1,14 @@
+doctype html
+
+html.no-js(lang="en")
+
+    block pageData
+
+    head
+        include ./head.jade
+
+    body.structure--transition(data-page='#{page.template}')
+        
+        include ./tag-manager.jade
+        include ../svg/icons.svg
+        

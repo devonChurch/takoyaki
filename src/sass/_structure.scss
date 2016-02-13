@@ -1,0 +1,64 @@
+.structure {
+
+	&--background {
+		background: white;
+		padding: 0 1em 1em;
+
+        @include media('>=small') {
+            min-height: calc(100vh - 2em);
+            padding: 1em;
+        }
+	}
+
+	&--column {
+		margin: auto;
+		max-width: 48em;
+        min-height: calc(100vh - 2em);
+        position: relative;
+		transition-property: opacity, transform;
+		transition: speed(fast);
+
+        @include media('>=small') {
+            min-height: calc(100vh - 4em);
+            padding-bottom: calc(#{vertical(large)} + 1em);
+        }
+	}
+
+	&--divider {
+		$height: 1px;
+		border: 0;
+		height: $height;
+		margin: vertical(medium) auto;
+		position: relative;
+
+		&:before {
+			background: color(blue, light);
+			content: '';
+			display: block;
+			height: $height;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			transform: translateX(-50%);
+			width: 100%;
+
+			@include media('>=large') {
+				// -5em = 2em (color border) + 2em (content padding) + 1em (scroll bar)
+				max-width: calc(100vw - 5em);
+				width: 116%;
+			}
+		}
+	}
+
+	@at-root html:not(.no-js) {
+
+		.structure--transition {
+			background: white;
+
+			 .structure--column {
+				opacity: 0;
+				transform: scale(0.9);
+			}
+		}
+	}
+}

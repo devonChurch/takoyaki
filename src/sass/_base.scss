@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    color: color(blue);
+    font-family: 'roboto-light';
+    margin: 0;
+    transition: background speed(fast);
+
+    @include media('>=small') {
+        background: color(blue);
+    }
+}
+
+// We are pulling out the <symbol> elements to use throughout the site however
+// we do not want the master sprite to be visible.
+.iconSprite {
+    display: none;
+}

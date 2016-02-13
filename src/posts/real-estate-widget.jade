@@ -1,0 +1,37 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'Real Estate widget',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 11,
+                day: 14
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'real-estate-widget-large', extension: 'jpg', alt: 'Real estate widget residing within the desktop environment of stuff.co.nz'},
+                    {src: 'real-estate-widget-small', extension: 'jpg', alt: 'Real estate widget as part of a mobile interstitial advertising unit on the stuff.co.nz iPhone app'}
+                ]
+            },
+            technology: [
+                'Grunt',
+                'PHP / CURL requests',
+                'CRON job',
+                'Javascript',
+                'Greensock',
+                'Handlebars',
+                'SASS',
+                'SVG'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        I designed and built the following Realstate widget as a revenue generation initiative for [stuff.co.nz](http://www.stuff.co.nz/). The client (initially Bayleys) could either pass in curated JSON data to the unit in addition to an option of scraping their site via a CRON job / CURL setup that pulled relevant content from pages that held the correct query parameters. This effectively made the unit a “set and forget” execution which was an appealing scenario when pitching to potential clients.
+    
+        The widget aesthetics utilised the Material design methodology which allowed for a layout that could accommodate residing in a desktop environment or as a full page mobile modal advert.lay large amounts of tabular data was paramount to the Media Hub’s success. I built a node script that took tabular data from the companies legacy Microsoft Excel files and converted it into JSON. This data was then AJAX’d into the rate card on request. Displaying this data in a responsive format was necessary as the sales team often utilised this area of the portal offsite.

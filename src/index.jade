@@ -1,0 +1,24 @@
+-
+    page = {
+        template: 'home',
+        nav: [
+            { heading: 'About', link: '#about' },
+            { heading: 'Contact', link: '#contact' },
+            { heading: 'Work', link: '#work' }
+        ]
+    } //- page ]
+
+include ./partials/top.jade
+    include ./partials/structure.jade
+
+        section#about
+            :markdown
+                #My name is Devon Church. I am a developer in New Zealand currently working for Xero.
+
+                I have a passion for the web and the technologies that make it such a fast moving, capable and fun platform to build on. I have worked in various senior development positions for Fairfax Media, stuff.co.nz and Xero. Below are some of my experimental and production based executions. Feel free to contact of follow me via one of the methods below.
+
+        include ./partials/contact.jade
+        include ./partials/snippets.jade
+        include ./partials/more.jade
+        include ./partials/footer.jade
+    include ./partials/bottom.jade

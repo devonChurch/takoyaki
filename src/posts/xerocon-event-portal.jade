@@ -1,0 +1,40 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'Xerocon event portal',
+            type: 'Production',
+            date: generateDate({
+                year: 2015,
+                month: 4,
+                day: 28
+            }),
+            images: {
+                type: '3upEqual',
+                data: [
+                    {src: 'xerocon-event-portal-small', extension: 'jpg', alt: 'Windows Phone app pulling in content with a custom app layout'},
+                    {src: 'xerocon-event-portal-medium', extension: 'jpg', alt: 'Xerocon event home page viewed on an iPad'},
+                    {src: 'xerocon-event-portal-large', extension: 'jpg', alt: 'Dynamic schedule presented in its larger layout format'}
+                ]
+            },
+            technology: [
+                'Javascript',
+                'SASS',
+                'SVG',
+                'Responsive design'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        For the 2015 Xerocon events held in Auckland, Melbourne, London and Denver I implemented the design teams new website aesthetic into the into xero.com ecosystem.
+
+        Key concepts required from a development perspective were performance, easily augmentable components based on region and imploring a responsive methodology.
+
+        Each component had its own segregated CMS, SASS, and Javascript models. When a component was present on a page it was activated using the Javascript revealing module pattern which cross referenced page URL, component content and device type to generate the best user experience for the current circumstance.
+
+        The schedule was an aspect that was given substantial attention to. The page had filter setup for days, roles as well as a key with iconography. Because the schedule was always being tweaked keeping all of these elements in sync was going to be a time consuming endeavour. Instead I opted to generated all of the dynamic functionality procedurally from the content that the marketing team was inputting into the CMS. The layout needed to be accessible at the venue on smaller devices so we make a completely new UI for smaller devices using the same DOM content injected from the CMS.
+
+        I also collaborated closely with Microsoft (one of the event sponsors) to build out a Windows Phone app based on our sites content. The app would append a query string to all Xerocon URL’s which would modify the page aesthetic as well as make the experience behave like a native app.

@@ -1,0 +1,34 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'Jaguar Expandable Advert',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 10,
+                day: 29
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'jaguar-expandable-advert-laptop', extension: 'jpg', alt: 'xxxxxxx'},
+                    {src: 'jaguar-expandable-advert-desktop', extension: 'jpg', alt: 'xxxxxxx'}
+                ]
+            },
+            technology: [
+                'Flash',
+                'Greensock',
+                'Sizmek'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        The Jaguar full page expandable padres was part of a take over campaign on various section on [stuff.co.nz](http://www.stuff.co.nz/). The execution needed to display the same aesthetics and functionality that a premium brand like Jaguar portrayed.
+
+        I relied heavily on complex animations to keep the user engaged throughout the nine screen interactive experience. I liaised closely with agency [Y&R](http://yr.co.nz/) to ensure the finished product was on brand with their nation wide campaign for Jaguar spanning multiple advertising mediums.
+
+        The unit was served through the [Sizmek](http://www.sizmek.com/) platform where I setup a granular analytics systems to report back to Y&R regarding user interaction and customer conversion metrics.

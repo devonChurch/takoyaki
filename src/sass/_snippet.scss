@@ -1,0 +1,57 @@
+.snippets .structure--divider:first-of-type {
+    display: none;
+}
+
+.snippet {
+    position: relative;
+
+    &__link {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+
+            .snippet__heading {
+                color: color(pink);
+            }
+
+            & ~ .snippet__hashtag {
+                color: color(pink, dark);
+            }
+
+            & ~ .snippet__date {
+                color: color(pink, light);
+            }
+        }
+    }
+
+    &__heading,
+    &__hashtag,
+    &__date {
+        transition: color speed(fast);
+    }
+
+    &__heading {
+        color: color(blue, dark);
+        display: inline-block;
+        margin: 0 0 -0.25em;
+
+        @include media('>=small') {
+            max-width: calc(100% - 4vh - 4.5em);
+        }
+    }
+
+    &__hashtag {
+        display: block;
+    }
+
+    &__date {
+        color: color(gray, light);
+
+        @include media('>=small') {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

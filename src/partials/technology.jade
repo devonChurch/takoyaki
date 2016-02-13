@@ -1,0 +1,7 @@
+if page.technology && page.technology.length
+    section#technology
+        h2.tech__heading Technology:
+
+        ul.tech__list
+            for item in page.technology
+                li.tech__item.type--smallCap #{item}

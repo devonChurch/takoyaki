@@ -1,0 +1,7 @@
+if page.images && page.images.data.length
+    section#images(class='images images--#{page.images.type}')
+        ul.images__list
+            for item in page.images.data
+                li.images__item
+                    div.images__placeholder: svg.images__icon: use(xlink:href='#image')
+                    img.images__image(src='/img/#{item.src}.#{item.extension}', srcset='img/#{item.src}-2x.#{item.extension} 2x', alt='#{item.alt}')

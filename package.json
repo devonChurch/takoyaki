@@ -1,0 +1,76 @@
+{
+  "name": "takoyaki",
+  "version": "1.0.0",
+  "description": "A simple personal portal for the domain devonchu.ch",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server && npm run build:production && npm run watch",
+    "build:development": "npm run posts:render && npm run libs:development && npm run media:render && npm run copy",
+    "build:production": "npm run posts:render && npm run libs:production && npm run media:render && npm run copy",
+    "posts:curate": "cd ./build/home && node curate.js",
+    "posts:order": "cd ./build/posts && open order.js",
+    "posts:new": "cd ./build/posts && node new.js",
+    "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/404.jade ./src/posts --out ./dist",
+    "media:sprite": "cd ./build/sprite && node generate.js",
+    "media:images": "cp -R ./src/img ./dist/ && imageoptim --directory ./dist/img",
+    "media:render": "npm run media:sprite && npm run media:images",
+    "libs:development": "webpack",
+    "libs:production": "webpack && npm run libs:js && npm run libs:sass",
+    "libs:js": "uglifyjs ./dist/bundle.js --compress --mangle --output ./dist/bundle.js",
+    "libs:sass": "cd ./build/libs && node styles.js",
+    "copy": "npm run copy:cname && npm run copy:favicons",
+    "copy:cname": "cp ./src/CNAME ./dist",
+    "copy:favicons": "cp ./src/favicon.png ./dist && cp ./src/apple-touch-icon.png ./dist && cp ./src/favicon.ico ./dist",
+    "publish": "npm run build:production && git subtree push --prefix dist origin gh-pages",
+    "server": "cd ./dist && live-server",
+    "watch": "npm run watch:jade & npm run watch:libs & npm run watch:media",
+    "watch:jade": "watch-spawn -p 'src/**/!(curated.jade)*.jade' npm run posts:render",
+    "watch:libs": "watch-spawn -p 'src/**/*.{js,scss}' webpack",
+    "watch:media": "watch-spawn -p 'src/**/*.{svg,jpg,png,gif}' npm run media:render"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonChurch/takoyaki.git"
+  },
+  "keywords": [
+    "Static site generator",
+    "Portal",
+    "ES6"
+  ],
+  "author": "Devon Church",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devonChurch/takoyaki/issues"
+  },
+  "homepage": "https://github.com/devonChurch/takoyaki#readme",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^5.8.33",
+    "babel-eslint": "^4.1.4",
+    "babel-loader": "^5.3.3",
+    "copy-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.9.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-babel": "^2.1.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.5",
+    "glob": "^6.0.4",
+    "imageoptim-cli": "^1.11.6",
+    "jade": "^1.11.0",
+    "jstransformer-markdown": "^1.1.0",
+    "live-server": "^0.9.1",
+    "node-sass": "^3.4.1",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "svg-sprite": "^1.2.19",
+    "uglifyjs": "^2.4.10",
+    "url-loader": "^0.5.7",
+    "watch-spawn": "^1.0.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}
