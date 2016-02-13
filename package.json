@@ -8,6 +8,7 @@
     "build": "npm run posts:render && webpack && npm run copy",
     "posts:curate": "cd ./build/home && node curate.js",
     "posts:order": "cd ./build/posts && open order.js",
+    "posts:new": "cd ./build/posts && node new.js",
     "posts:render": "npm run posts:curate && jade ./src/index.jade ./src/404.jade ./src/posts --out ./dist",
     "media:sprite": "cd ./build/sprite && node generate.js",
     "media:images": "cp -R ./src/img ./dist/ && imageoptim --directory ./dist/img",
