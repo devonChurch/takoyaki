@@ -1,6 +1,6 @@
 # Takoyaki
 
-A simple personal portal for the domain [devonchu.ch](http://devonchur.ch/).
+A static site generator used as a personal portal for the domain [devonchu.ch](http://devonchur.ch/).
 
 ## Installation
 
@@ -85,29 +85,64 @@ When editing a posts content make sure you follow the structure that the templat
 
 The **page** object holds information utilised by other Jade partials:
 
+```
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'Enter Your Title',
+            type: 'Production',
+            date: generateDate({
+                year: 2016,
+                month: 01,
+                day: 01
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'image-one-source', extension: 'jpg', alt: 'Alt text for image two'},
+                    {src: 'image-one-source', extension: 'jpg', alt: 'Alt text for image two'}
+                ]
+            },
+            technology: [
+                'Foo',
+                'Bar',
+                'Baz'
+            ],
+            more: [
+                {heading: 'Foo', link: 'https://www.google.com/', local: false},
+                {heading: 'Bar', link: 'https://www.google.com/', local: false}
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+
+```
+
+- #### Template:
+This should always have the value of *post* as it instructs Jade in how to render the page.
+
 - #### Heading, type and date:
  Are values that are procedurally curated into post snippets on the homepage in addition to generating the intro section on each dedicated post page. **Note:** supply the date attributes in numeric form and Jade will parse them into a more reader friendly format.
 
 - #### Images:
 Are supplied in both a generic and 2x variant. The naming convention between the two versions should only differ by the *-2x* appended onto the file name. The layout of the images can be dictated via the **images.type** attribute i.e. *3upEqual* or *2upEqual*. The **Images.data** array holds an object for each image instance. Each instance has the following attributes:
-    - ###### Src:
-    The name of the file. **Note** the *-2x* image versions are referenced automatically.
-    - ###### Extension:
-    File type i.e. jpg or png.
-    - ###### Alt:
-    The [alternate text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img/#attr-alt) for the image.
+    - **Src:** The name of the file. **Note** the *-2x* image versions are referenced automatically.
+    - **Extension:** File type i.e. jpg or png.
+    - **Alt:** The [alternate text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img/#attr-alt) for the image.
 
-- #### Technology
+- #### Technology:
 Is an simple array that holds a list of relevant web technologies to the associated post. This object will generate a custom section at the bottom of the main post content.
 
-- #### More
+- #### More:
 Is an array that holds an object for each button instance. This object will generate a custom section above the footer. Each instance has the following attributes:
-    - ###### Heading:
-    The name of the button.
-    - ###### Link:
-    The button URL.
-    - ###### Local
-    A boolean dictating if the URL is off site or not - this controls the animation transition.
+    - **Heading:** The name of the button.
+    - **Link:** The button URL.
+    - **Local:** A boolean dictating if the URL is off site or not - this controls the animation transition.
 
 - The presence of either **technology** or **more** content creates a nav item at the top of the current page which automatically scrolls down to the referenced section when clicked.
 
