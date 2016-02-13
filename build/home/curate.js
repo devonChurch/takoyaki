@@ -10,7 +10,7 @@ const dir = '../../src/';
     snippets = constructSnippets(snippets);
     injectSnippets(snippets);
 
-    console.log('SUCCESS: Curated post onto the home page as the appear in the build/posts/order.js config file');
+    console.log('SUCCESS: Curated post onto the home page as they appear in the build/posts/order.js config file');
 
 }
 

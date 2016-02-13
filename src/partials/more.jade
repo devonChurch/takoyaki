@@ -5,6 +5,6 @@ div#more.more
 
     div.more__functionality
     
-        if page && page.more
+        if page && page.more && page.more.length
             for item in page.more
                 a(class="button--func type--smallCap #{item.local ? 'button--local' : ''}", href='#{item.link}', role='button') #{item.heading}

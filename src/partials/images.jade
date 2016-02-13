@@ -1,4 +1,4 @@
-if page.images
+if page.images && page.images.data.length
     section#images(class='images images--#{page.images.type}')
         ul.images__list
             for item in page.images.data
