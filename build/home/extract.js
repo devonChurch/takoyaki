@@ -47,8 +47,8 @@ function distillData(post, data) {
 
 function extractData(data) {
 
-    const open = 'post = {';
-    const close = '} //- post ]';
+    const open = 'page = {';
+    const close = '} //- page ]';
     const start = data.indexOf(open) + open.length;
     data = data.substr(start);
     const end = data.indexOf(close);

@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Reversi board game',
             type: 'Experiment',
             date: generateDate({
@@ -25,10 +26,10 @@ block postData
                 'SASS'
             ],
             more: [
-                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/XXNqWE/'},
-                { heading: 'Git Hub', link: 'https://github.com/devonChurch/salmon-nigiri'}
+                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/XXNqWE/', local: false},
+                { heading: 'Git Hub', link: 'https://github.com/devonChurch/salmon-nigiri', local: false}
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

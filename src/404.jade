@@ -1,0 +1,22 @@
+-
+    page = {
+        template: 'error',
+        nav: [
+            { heading: 'Contact', link: '#contact'},
+            { heading: 'More', link: '#more'}
+        ],
+        more: [
+            { heading: 'Back Home', link: '/', local: true}
+        ]
+    } //- page ]
+
+include partials/top.jade
+
+    section
+        :markdown
+            #Error #404.
+
+            Sorry, this page was unable to be located. Please try going back to the homepage or utilise one of the external links below. 
+
+    include partials/contact.jade
+    include partials/bottom.jade

@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Xerocon particle animation',
             type: 'Experiment',
             date: generateDate({
@@ -24,10 +25,10 @@ block postData
                 'SASS'
             ],
             more: [
-                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/zrBBZa/'},
-                { heading: 'Git Hub', link: 'https://github.com/devonChurch/blueberry-danish'}
+                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/zrBBZa/', local: false},
+                { heading: 'Git Hub', link: 'https://github.com/devonChurch/blueberry-danish', local: false}
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

@@ -1,7 +1,7 @@
-if post && post.technology
+if page.technology
     section#technology
         h2.tech__heading Technology:
 
         ul.tech__list
-            for item in post.technology
+            for item in page.technology
                 li.tech__item.type--smallCap #{item}

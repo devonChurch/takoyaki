@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Xero year in review',
             type: 'Production',
             date: generateDate({
@@ -25,9 +26,9 @@ block postData
                 'Vimeo'
             ],
             more: [
-                { heading: 'Preview', link: 'https://www.xero.com/year-in-review/'}
+                { heading: 'Preview', link: 'https://www.xero.com/year-in-review/', local: false}
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

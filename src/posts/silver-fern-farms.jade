@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Silver Fern Farms Premier Selection Awards',
             type: 'Production',
             date: generateDate({
@@ -24,7 +25,7 @@ block postData
                 'Handlebars',
                 'SASS'
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

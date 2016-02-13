@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Heart rate monitor',
             type: 'Experiment',
             date: generateDate({
@@ -24,10 +25,10 @@ block postData
                 'HSL'
             ],
             more: [
-                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/bERMeZ/'},
-                { heading: 'Git Hub', link: 'https://github.com/devonChurch/pork-dumpling'}
+                { heading: 'Code Pen', link: 'http://codepen.io/DevonChurch/full/bERMeZ/', local: false},
+                { heading: 'Git Hub', link: 'https://github.com/devonChurch/pork-dumpling', local: false}
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

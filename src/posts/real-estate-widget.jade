@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Real Estate widget',
             type: 'Production',
             date: generateDate({
@@ -27,7 +28,7 @@ block postData
                 'SASS',
                 'SVG'
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

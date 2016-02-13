@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Jaguar Expandable Advert',
             type: 'Production',
             date: generateDate({
@@ -22,7 +23,7 @@ block postData
                 'Greensock',
                 'Sizmek'
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown

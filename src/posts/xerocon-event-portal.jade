@@ -1,8 +1,9 @@
 extends ../partials/post.jade
 
-block postData
+block pageData
     -
-        post = {
+        page = {
+            template: 'post',
             heading: 'Xerocon event portal',
             type: 'Production',
             date: generateDate({
@@ -24,7 +25,7 @@ block postData
                 'SVG',
                 'Responsive design'
             ]
-        } //- post ]
+        } //- page ]
 
 block content
     :markdown
