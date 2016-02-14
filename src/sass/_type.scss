@@ -53,6 +53,17 @@ h1 {
     }
     margin: vertical(large) 0 vertical(medium);
     max-width: 19em;
+
+    a {
+        color: color(blue, dark);
+        text-decoration: none;
+        transition: color speed(fast);
+
+        &:hover,
+        &:focus {
+            color: color(pink);
+        }
+    }
 }
 
 h2 {

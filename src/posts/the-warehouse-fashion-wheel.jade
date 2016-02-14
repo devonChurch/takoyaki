@@ -14,9 +14,9 @@ block pageData
             images: {
                 type: '3upEqual',
                 data: [
-                    {src: 'the-warehouse-fashion-wheel-dormant', extension: 'jpg', alt: 'The initial layout of the fashion wheel. The outer segments all animate into view in a staggered clockwise configuration and an animated instruction sequence plays in the centre promoting users in interact with the unit'},
-                    {src: 'the-warehouse-fashion-wheel-over', extension: 'jpg', alt: 'When a user hovers over a segment it becomes the primary focus with an expanded version occupying the centre of the unit. A “more information” prompt is then displayed with prominence'},
-                    {src: 'the-warehouse-fashion-wheel-active', extension: 'jpg', alt: 'The information overlay has a short garment description with a “view more” call to action which take the user to The Warehouse site'}
+                    {src: 'the-warehouse-fashion-wheel-dormant', extension: 'jpg', alt: 'The initial layout of the fashion wheel. The outer segments all animate into view with staggered clockwise configuration. An animated instruction sequence plays in the centre promoting users in interact with the unit'},
+                    {src: 'the-warehouse-fashion-wheel-over', extension: 'jpg', alt: 'When a user hovers over a segment it becomes the primary focus with an expanded version of the garment occupying the centre of the unit. A “more information” prompt is then displayed with prominence'},
+                    {src: 'the-warehouse-fashion-wheel-active', extension: 'jpg', alt: 'The information overlay has a short garment description with a “view more” call to action which takes the user to The Warehouse site'}
                 ]
             },
             technology: [
@@ -30,8 +30,6 @@ block pageData
 
 block content
     :markdown
-        The fashion wheel was an initiative from the [stuff.co.nz](http://www.stuff.co.nz/) marketing team. Clients supplied a feed of JSON data which was injected into the unit on the fly.
-
-        The fashion wheel was constructed out of SVG elements. Based on how many entries were in the JSON feed the segments around the wheels edge were augmented to accommodate the data.
+        The fashion wheel was an initiative from the [stuff.co.nz](http://www.stuff.co.nz/) marketing team. Clients supplied a feed of JSON data which was injected into the unit on the fly. The fashion wheel was constructed out of SVG elements. Based on how many entries were in the JSON feed the segments around the wheels edge were augmented to accommodate the data.
 
         To keep the execution engaging heavy amounts of animation were used. I also constructed a set of granular analytics through [Adobe SiteCatalyst](http://www.adobe.com/marketing-cloud/web-analytics/marketing-analytics-capabilities.html) that referenced each item within the fashion wheel and how the user interacted with them.

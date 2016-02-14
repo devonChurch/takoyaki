@@ -70,6 +70,12 @@ h1 {
   font-size: 1.7em;
   margin: 8vh 0 4vh;
   max-width: 19em; }
+  h1 a {
+    color: #19415a;
+    text-decoration: none;
+    transition: color 0.25s; }
+    h1 a:hover, h1 a:focus {
+      color: #E91E63; }
 
 h2 {
   font-family: 'signika-bold';
