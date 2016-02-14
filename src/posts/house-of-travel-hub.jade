@@ -1,0 +1,35 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'House of Travel Stuff.co.nz hub',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 9,
+                day: 12
+            }),
+            images: {
+                type: '2upEqual',
+                data: [
+                    {src: 'house-of-travel-hub-laptop', extension: 'jpg', alt: 'The above the fold content of the House of Travel hub displayed on a Macbook'},
+                    {src: 'house-of-travel-hub-desktop', extension: 'jpg', alt: 'A mixture of curated articles and static content displayed on an iMac'}
+                ]
+            },
+            technology: [
+                'Codekit',
+                'Greensock',
+                'JSONP / AJAX',
+                'CRON job'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        The House of Travel hub was a dedicated section inside stuff.co.nz’s [Travel section](http://www.stuff.co.nz/travel). The page aggregated content from House of Travel and stuff.co.nz’s server into relevant modules throughout the design.
+
+        I created a CMS system for travel Journalists to augment the layout and content of the page at any given time. modules could be reordered or turned on / off, content feeds could be redefined and any static copy of media assets could be directly updated.
+
+        This granular level of control resulted in the hub being updated on a regular basis as there was no need for developer assistance. 

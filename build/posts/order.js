@@ -11,6 +11,7 @@ module.exports = [
     'the-warehouse-fashion-wheel',
     'stuff-media-hub',
     'silver-fern-farms',
+    'house-of-travel-hub',
     'bnz-homepage-takeover',
     'stuff-dynamic-billboards'
 ];
