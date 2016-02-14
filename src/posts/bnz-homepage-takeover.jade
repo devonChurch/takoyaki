@@ -1,0 +1,37 @@
+extends ../partials/post.jade
+
+block pageData
+    -
+        page = {
+            template: 'post',
+            heading: 'BNZ full page stuff.co.nz takeover',
+            type: 'Production',
+            date: generateDate({
+                year: 2014,
+                month: 8,
+                day: 28
+            }),
+            images: {
+                type: '3upEqual',
+                data: [
+                    {src: 'bnz-closed-for-good-small', extension: 'jpg', alt: 'iOS stuff.co.nz app full page interstitial advert'},
+                    {src: 'bnz-closed-for-good-social', extension: 'jpg', alt: 'The expanded header pulling in curated social content from BNZ’s tag Board feed'},
+                    {src: 'bnz-closed-for-good-video', extension: 'jpg', alt: 'The expanded video overlay streaming from Sizmek’s servers'}
+                ]
+            },
+            technology: [
+                'Flash',
+                'HTML5',
+                'JSONP / AJAX',
+                'CRON job',
+                'PHP'
+            ]
+        } //- page ]
+
+block content
+    :markdown
+        [Stuff.co.nz](http://www.stuff.co.nz/) created a multi platform campaign around the BNZ “Closed for Good” initiative. Throughout the day we would display progress updates via social media channels and video.
+
+        BNZ’s community team curated their social content via the [Tag Board](https://tagboard.com/) platform. I then accessed their API to pull through content into the homepage of stuff.co.nz. To lessen the load on the Tag Board servers I set up a CRON job to pull the curated JSON feed onto stuff’s server every minute where it could be cached and server to a large user base.
+
+        Agency [DDB](http://www.ddb.co.nz/) cut together multiple videos throughout the day which we injected into the plug and play setup I created though [Sizmek](http://www.sizmek.com/).
